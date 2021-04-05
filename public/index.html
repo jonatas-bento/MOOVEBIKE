@@ -8,26 +8,30 @@
     <link rel="stylesheet" href="stylesheets/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
     <title>MooveBike</title>
 </head>
 
 <body>
-    <!--First Section-->
+    <!--First Part-->
     <section class="first">
-        <header>
-            <div class="logo">
-                <img src="/public/images/Logo_Moovebikea_mod.png" alt="">
+        <header id="headerTopo" class>
+            <div class="logo"><a href="index.html">MooveBike Logo</a>
             </div>
             <nav>
                 <ul class="navegador">
-                    <li><a href="#">Home</a></li>
+                    <li><a href="index.html">Home</a></li>
                     <li><a href="#">Bikes</a></li>
                     <li><a href="#">Planos</a></li>
-                    <li><a href="#">Contato</a></li>
+                    <li><a href="#">Estações</a></li>
                 </ul>
             </nav>
-            <a href="#" class="btn-login">Login</a>
+            <div class="btns-header">
+                <a href="login.html" class="btn-login">Login</a>
+                <a href="cadastro.html" class="btn-cadastro">Cadastre-se</a>
+            </div>
         </header>
+
         <div class="slider">
             <figure>
                 <img src="images/background-02-1920x800.jpg" alt="">
@@ -38,10 +42,9 @@
 
             <div class="content">
                 <h1>Comece a Pedalar Já</h1><br>
-                <h4>Cantrate um plano e comece sua trajetória para uma vida mais saudável.</h4><br><br>
+                <h4>Contrate um plano e comece sua trajetória para uma vida mais saudável.</h4><br><br>
                 <a href="#" class="btn-planos">Nossos Planos</a>
             </div>
-        </div>
     </section>
     <!--Second Section-->
     <section class="second-section">
@@ -150,7 +153,7 @@
     </footer>
     
 
-
+<script src="javascripts/sticky.js"></script>
 </body>
 
 </html>

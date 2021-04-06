@@ -182,7 +182,7 @@ header .btn-login:hover, .btn-cadastro:hover {
 /*-------------------Second Section ----------------------*/
 
 .second-section{
-  background-image: url(/public/images/backgrounds-texture-01-1920x589.jpg);
+  background-image: url(/images/backgrounds-texture-01-1920x589.jpg);
   height: 550px;
   box-sizing: border-box;
 }
@@ -286,84 +286,111 @@ header .btn-login:hover, .btn-cadastro:hover {
 
 /* ---------------OUR PRODUCTS------------------------- */
 
-.third{
-  background-image: url(/public/images/background-body-1920x593.jpg);
+.fourth-section{
+  background-image: url(/images/background-body-1920x593.jpg);
 }
-/*.products {
-  background-color:#e6e6e7;
+.products {
   padding: 20px;
-}*/
-
-.title,
-.title1 {
-  width:100%;
-  height: 50px;
-  padding: 5px;
-  display: flex; 
-  justify-content: center;
-  align-items: center;    
 }
-
-.products .title p{
-  font-size: 2rem;
-  font-weight: bold;
+.title-produtcs{
+  display: flex;
+}
+.title-products {
+  font-size: 2.8rem;
   color: black;
-}
-
-.title1 p{
-  font-size: 1.1rem;
   font-weight: bold;
+  padding: 11px;
+  margin: 70px 0px 0px 0px;
+  text-align: center;
 }
-
-.bikeT,
-.bikeE {
+.division-products{
+  background-color:black;
+  width: 35px;
+  height: 3px;
+  padding: 0;
+  margin: 1px auto 50px;
+  border: none;
+}
+.tradicional,
+.eletric {
   display: flex;
   justify-content: center;
 }
-
-.tradicional,
-.eletric{
-  width: 350px;
-  height: 350px;
-  border: 1px dotted grey;
+.tradicional-bike,
+.eletric-bike{
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0 20px;
+  margin: 10px;
+  max-width: 600px;
+  max-height: 400px;
+}
+.tradicional-bike img,
+.eletric-bike img {
+  max-width: 100%;
+  opacity: 0.7;
+}
+.text-products{
+  display: flex;
 }
 
-
-.tradicional img,
-.eletric img{
-  width: 350px;
-  height: 350px;
+.text-products a {
+  position: absolute;
+  margin-left: 200px;
+  font-size: 2.3rem;
+  text-decoration: none;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
+  color: white;
+  z-index: 2; 
 }
-
-
-@media (max-width: 767px) {
-  .bikeT,
-  .bikeE{
-      flex-direction: column;
-      justify-content: center;  
-  }
-
+a:hover {
+  cursor: pointer;
+  color:#02B3A1;
+}
+ @media (max-width: 426px) {
   .tradicional,
   .eletric{
-      margin: 10px auto;
+      flex-wrap: wrap;
+      justify-content: center; 
+  }
+  .text-products a {
+    font-size: 1.5rem;
+  } 
+}
+@media (max-width: 770px) {
+  .tradicional,
+  .eletric{
+      flex-wrap: wrap;
+      justify-content: center; 
   }
 }
 
 /* ---------------FOOTER-------------------------- */
 
 footer {
-  background-image: url(/public/images/backgrounds-texture-01-1920x589.jpg);
+  background-image: url(/images/backgrounds-texture-01-1920x589.jpg);
   display: flex;
   padding: 15px 100px;
   justify-content: space-around
 }
 .geral {
   display: flex;
+  justify-content: space-around;
+  width: 60%;
+
   
+}
+
+footer .navegador-1{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+footer .navegador-2{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 footer .navegador-1 li {

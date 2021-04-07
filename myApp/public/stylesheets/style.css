@@ -25,7 +25,7 @@ header .logo a{
   color:#fff;
   text-decoration: none;
   text-transform: uppercase;
-  background-image: url("../images/Logo_MoovebikeA_modV3.png");
+  background-image: url("/images/Logo_MoovebikeA_modV3.png");
   background-size: 200px;
   background-repeat: no-repeat;
   display: inline-block;
@@ -356,6 +356,10 @@ a:hover {
   .text-products a {
     font-size: 1.5rem;
   } 
+  .title-products{
+    font-size: 2rem;
+
+  }
 }
 @media (max-width: 770px) {
   .tradicional,

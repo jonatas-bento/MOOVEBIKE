@@ -16,4 +16,18 @@ router.get('/cadastro', function(req, res, next) {
   res.render('cadastro');
 });
 
+/* GET Fale Conosco */
+router.get('/faleconosco', function(req, res, next) {
+  res.render('faleconosco');
+});
+
+/* GET Locais e Estações */
+router.get('/estacoes', function(req, res, next) {
+  res.render('estacoes');
+});
+
+/* GET Planos disponíveis */
+router.get('/planos', function(req, res, next) {
+  res.render('planos');
+});
 module.exports = router;

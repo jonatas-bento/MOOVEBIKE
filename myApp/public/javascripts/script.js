@@ -30,3 +30,47 @@ btnScrolltoTop.addEventListener("click", function (){
         behavior: "smooth" 
     })
 });
+
+function Enviar() {
+    let nome = document.getElementById("nome");
+    if (nome.value != "") {
+        alert('Obrigado sr(a) ' + nome.value + ' a sua mensagem foi registrada');
+    }
+}
+
+/*********Configuring Locations *******************/
+
+function initMap() {
+    const map = new google.maps.Map(document.getElementById("map"), {
+      zoom: 12,
+      center: { lat: -23.5558894, lng: -46.6566727 },
+    });
+    // Set LatLng and title text for the markers. The first marker (Boynton Pass)
+    // receives the initial focus when tab is pressed. Use arrow keys to
+    // move between markers; press tab again to cycle through the map controls.
+    const tourStops = [
+      [{ lat: -23.5481768, lng: -46.666611 }, "Universidade Mackenzie"],
+      [{ lat: -23.5493958, lng: -46.6622115 }, "Higienópolis Pet"],
+      [{ lat: -23.5493958, lng: -46.6622115 }, "Chapel of the Holy Cross"], 
+      [{ lat: -23.5559607, lng: -46.6563214 }, "Buffet Frei Caneca"],
+      [{ lat: -23.55585, lng: -46.6559727 }, "Agata Almeida"],
+    ];
+    // Create an info window to share between markers.
+    const infoWindow = new google.maps.InfoWindow();
+    // Create the markers.
+    tourStops.forEach(([position, title], i) => {
+      const marker = new google.maps.Marker({
+        position,
+        map,
+        title: `${i + 1}. ${title}`,
+        label: `${i + 1}`,
+        optimized: false,
+      });
+      // Add a click listener for each marker, and set up the info window.
+      marker.addListener("click", () => {
+        infoWindow.close();
+        infoWindow.setContent(marker.getTitle());
+        infoWindow.open(marker.getMap(), marker);
+      });
+    });
+  }

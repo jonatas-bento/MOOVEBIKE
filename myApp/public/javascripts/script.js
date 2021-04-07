@@ -19,3 +19,14 @@ function myFunction() {
         header.classList.remove("sticky");
     }
 }
+
+/************ScrollToTop ************/
+
+const btnScrolltoTop = document.querySelector('#btnScrolltoTop');
+btnScrolltoTop.addEventListener("click", function (){
+    window.scrollTo({
+        top: 0,
+        left: 0,
+        behavior: "smooth" 
+    })
+});

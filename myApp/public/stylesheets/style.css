@@ -446,3 +446,28 @@ footer a:hover {
       justify-content: center;  
   }
 }
+
+#btnScrolltoTop{
+  position: fixed;
+  right: 10px;
+  bottom: 5px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50px;
+  background-color:#1f2932;
+  box-shadow: 0 0 10 rgba(0, 0, 0, 0.75);
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+#btnScrolltoTop::before{
+  content: '\02C4';
+  font-size:large;
+  font-weight: bolder;
+  color: #ffff;
+}
+
+#btnScrolltoTop:active{
+  background-color: #02B3A1;
+}

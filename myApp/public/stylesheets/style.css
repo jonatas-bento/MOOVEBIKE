@@ -409,6 +409,7 @@ header .btn-login:hover, .btn-cadastro:hover {
 .eletric-bike img {
   max-width: 100%;
   opacity: 0.7;
+  box-shadow: 6px 6px 6px #888
 }
 .text-products{
   display: flex;

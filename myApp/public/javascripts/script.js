@@ -45,6 +45,9 @@ function initMap() {
       zoom: 12,
       center: { lat: -23.5558894, lng: -46.6566727 },
     });
+
+    const iconBase = '/images/';
+
     // Set LatLng and title text for the markers. The first marker (Boynton Pass)
     // receives the initial focus when tab is pressed. Use arrow keys to
     // move between markers; press tab again to cycle through the map controls.
@@ -62,6 +65,7 @@ function initMap() {
       const marker = new google.maps.Marker({
         position,
         map,
+        icon: iconBase + 'Icon_MooveA.png',
         title: `${i + 1}. ${title}`,
         label: `${i + 1}`,
         optimized: false,

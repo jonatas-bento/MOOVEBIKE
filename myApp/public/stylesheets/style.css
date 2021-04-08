@@ -404,6 +404,7 @@ header .btn-login:hover, .btn-cadastro:hover {
   margin: 10px;
   max-width: 600px;
   max-height: 400px;
+  box-shadow: 6px 6px 6px #888; /*COLOQUEI BORDA*/
 }
 .tradicional-bike img,
 .eletric-bike img {

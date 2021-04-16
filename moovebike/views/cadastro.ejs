@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro</title>
+    <link rel="stylesheet" href="/stylesheets/cadastro.css">
+</head>
+
+<body>
+    <header>
+        <a href="/"><img src="/images/Logo_MoovebikeA_modV3.png" alt=""></a>
+    </header>
+    <main>
+        <h1>Criar conta</h1>
+        <h2>Entrar com</h2>
+        <div class="social-media">
+            <a href="#">
+                <img src="/images/google.png" alt="Google">
+            </a>
+            <a href="#">
+                <img src="/images/facebook.png" alt="Facebook">
+            </a>
+        </div>
+        <div class="cadastro">
+            <span>Cadastre-se</span>
+        </div>
+
+        <form>
+            <label for="name">
+                <span>Nome Completo</span>
+                <input type="text" id="name" name="name" required="required">
+            </label>
+
+            <label for="CPF">
+                <span>CPF</span>
+                <input type="text" id="CPF" name="CPF" required="required">
+            </label>
+
+            <label for="nascimento">
+                <span>Data de nascimento</span>
+                <input type="date" id="nascimento" name="nascimento" required="required">
+            </label>
+
+            <label for="email">
+                <span>Email</span>
+                <input type="text" id="email" name="email" required="required">
+            </label>
+
+            <label for="password">
+                <span>Senha</span>
+                <input type="password" id="password" name="password" required="required">
+            </label>
+            <button type="submit">Inscreva-se</button>
+
+        </form>
+    </main>
+<script src="/javascripts/sticky.js"></script>
+</body>
+
+</html>

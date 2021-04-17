@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <title>MooveBike</title>
+</head>
+
+<body>
+    <!--First Part-->
+    <section class="first">
+        
+        <%- include('partials/header.ejs') %>
+
+        <div class="slider">
+            <figure>
+                <img src="img/background-02-1920x800.jpg" alt="">
+                <img src="img/background-03-1920x800.jpg" alt="">
+                <img src="img/background-04-1920x800.jpg" alt="">
+                <img src="img/background-02-1920x800.jpg" alt="">
+            </figure>
+
+            <div class="content">
+                <h1>Comece a Pedalar Já</h1><br>
+                <h4>Contrate um plano e comece sua trajetória para uma vida mais saudável.</h4><br><br>
+                <a href="/planos" class="btn-planos">Nossos Planos</a>
+            </div>
+    </section>
+    <!--Second Section-->
+    <section class="second-section">
+        <div class="rules">
+            <div class="title-rules">
+                <span>Regras Utilização</span>
+            </div>
+            <hr class="division">
+            <div class="boxes-second-section">
+                <div class="second-section-box">
+                    <img class="numbers" src="/img/one-removebg-preview.png" alt="">
+                    <h3>CADASTRO</h3>
+                    <hr class="division-insidebox">
+                    <p>Cadastre-se em nosso site.</p>
+                </div>
+                <div class="second-section-box1">
+                    <img class="numbers" src="/img/two-removebg-preview.png" alt="">
+                    <h3>PLANO</h3>
+                    <hr class="division-insidebox">
+                    <p>Escolha um plano. Temos planos: Semanal, quinzenal e mensal.</p>
+                </div>
+                
+                <div class="second-section-box2">
+                    <img class="numbers" src="/img/threepg-removebg-preview.png" alt="">
+                    <h3>RESERVA</h3>
+                    <hr class="division-insidebox">
+                    <p>Faça sua reserva online.</p>
+                </div>
+                
+                <div class="second-section-box3">
+                    <img class="numbers" src="/img/four-removebg-preview.png" alt="">
+                    <h3>RETIRADA/DEVOLUÇÃO</h3>
+                    <hr class="division-insidebox">
+                    <p>Escolha a loja mais próxima de você para retirar e devolver.</p>
+                </div>
+            </div>
+    </section>
+    <section class="third-section">
+
+        <h2>Nossos Planos</h2>
+
+        <div class="container-box">
+            <div class="box">
+                <div class="plano">Diário</div>
+                <div class="valor">R$ 8,00</div>
+                <div class="texto">
+                    <span class="periodo">Passe Diário</span><br>
+                    <span class="aviso">*Checar planos para Moove Elétrica</span>
+                </div>
+                <button class="btn">Comprar Agora!</button>
+            </div>
+
+            <div class='box'>
+                <div class="plano">Relax</div>
+                <div class="valor">R$ 16,90</div>
+                <div class=texto>
+                    <span class="periodo">Plano Semanal</span><br>
+                    <span class="aviso">*Checar planos para Moove Elétrica</span>
+                </div>
+                <button class="btn">Comprar Agora!</button>
+            </div>
+
+            <div class='box'>
+                <div class="plano">Moove</div>
+                <div class="valor">R$ 29,90</div>
+                <div class="texto">
+                    <span class="periodo">Plano Mensal</span><br>
+                    <span class="aviso">*Checar planos para Moove Elétrica</span>
+                </div>
+                <button class="btn">Comprar Agora!</button>
+            </div>
+
+            <div class='box'>
+                <div class="plano">Super Moove</div>
+                <div class="valor">R$ 239,90</div>
+                <div class="texto">
+                    <span class="periodo">Plano Anual</span><br>
+                    <span class="aviso">*Checar planos para Moove Elétrica</span>
+                </div>
+                <button class="btn">Comprar Agora!</button>
+            </div>
+        </div>
+    </section>
+    <section class="fourth-section">
+        <div class="products">
+            <div class="title-products">
+                Nossas MOOVE's
+            </div>
+            <hr class="division-products">
+            <div class="tradicional">
+                <div class="tradicional-bike">
+                    <div class="text-products">
+                        <a href="#">MOOVE</a>
+                    </div>
+                    <img src="img/Bike01.png">
+                </div>
+                <div class="tradicional-bike">
+                    <div class="text-products">
+                        <a href="#">SUPER MOOVE</a>
+                    </div>
+                    <img src="img/Bike02.png">
+                </div>   
+            </div>
+            <div class="eletric">
+                <div class="eletric-bike">
+                    <div class="text-products">
+                        <a href="#">MOOVE-e</a>
+                    </div>
+                    <img src="/img/B02.png">
+                </div>
+                <div class="eletric-bike">
+                    <div class="text-products">
+                        <a href="#">SUPER MOOVE-e</a>
+                    </div>
+                    <img src="/img/B02.png">
+                </div>  
+            </div>
+        </div>
+
+    <%- include('partials/footer') %>
+    
+
+<script src="/js/script.js"></script>
+</body>
+
+</html>

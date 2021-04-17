@@ -11,4 +11,10 @@ Nosso grupo está trabalhando nas etapas desde a concepção de um MVP, Wirefram
 
 ## Autoria e Licença
 
-Equipe MoveeBike
+[Anne Bortoli de Oliveira] (https://github.com/ANNEBORTOLI)
+[Flávio Magalhaes Sipoli] (https://github.com/flavio-sipoli)
+[Flúvio Lima] (https://github.com/Gh0ulbrz)
+[Jonatas Bento] (https://github.com/jonatas-bento)
+[Lila An] (https://github.com/lilex82)
+[Lourene de Melo Camargo de Schueler] (https://github.com/Lourene-MCSchueler)
+

@@ -146,11 +146,15 @@ header .btn-login:hover, .btn-cadastro:hover {
 .slider .content h1 {
   box-sizing: border-box;
   color: #fff;
-  font-size: 3rem;
+  font-size: 4rem;
+  font-weight: 600;
 }
 
-.slider .content h4 {
+.slider .content h5 {
   color: #fff;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.5rem;
 }
 
 .slider .content .btn-planos {
@@ -184,9 +188,11 @@ header .btn-login:hover, .btn-cadastro:hover {
   box-sizing: border-box;
 }
 
+
 .rules {
   padding: 20px;
 }
+
 
 .boxes-second-section {
   display: flex;
@@ -208,12 +214,11 @@ header .btn-login:hover, .btn-cadastro:hover {
 
 .box-second h3{
   font-size: 1.5rem;
-  font-weight: bold;
   padding: 5px; 
 }
 
 .box-second p{
-  font-size: 1rem;
+  line-height: 1.5rem;
   padding: 10px;
 }
 
@@ -266,7 +271,6 @@ header .btn-login:hover, .btn-cadastro:hover {
 .plano {
   color: #fff;
   padding: 20px;
-  font-weight: bold;
   font-size: 1.5rem;   
 }
 
@@ -335,7 +339,7 @@ header .btn-login:hover, .btn-cadastro:hover {
   opacity: 0.7;
 }
 .text-products{
-  display: flex; 
+  display: flex;
 }
 
 .text-products a {
@@ -355,7 +359,6 @@ a:hover {
 /* ---------------FOOTER-------------------------- */
 
 footer {
-  background-image: url(/img/backgrounds-texture-01-1920x589.jpg);
   display: flex;
   padding: 15px 100px;
   justify-content: space-around

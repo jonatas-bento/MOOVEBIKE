@@ -1,16 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  box-sizing: border-box;
-  font-family: 'Roboto', Arial, Helvetica, sans-serif
-}
-
 body {
   background: url(/img/backgrounds-texture-01-1920x589.jpg);
   color: white;
-  font-weight: 500;
   display: flex;
   min-height: 100vh;
 }
@@ -84,4 +74,9 @@ button[type="submit"] {
 
 button[type="submit"]:hover {
   background: rgb(84, 250, 195);
+}
+
+.link a {
+  letter-spacing: 2px;
+  color: yellow;
 }

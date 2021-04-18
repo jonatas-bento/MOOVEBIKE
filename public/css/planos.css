@@ -1,11 +1,13 @@
-
-
+html {
+    background-image: url(/img/backgrounds-texture-01-1920x589.jpg);
+}
 .third-section {
     width: 100%;
-    background-image: url('../img/background-body-1920x593.jpg');
-    height: auto;
+    
+    height: 100vh;
     width: 100%;
-    text-align: center;    
+    text-align: center;
+    margin-top: 50px;
 }
 
 .third-section h2 {
@@ -76,4 +78,8 @@
 .third-section .btn:hover{
     background: #fff;
     border: solid 1px black;
+}
+
+#btnScrolltoTop {
+    display: none;
 }

@@ -1,4 +1,5 @@
 /**********First Section****************/
+/*
 header {
   position: absolute;
   top: 0;
@@ -73,7 +74,7 @@ header .btn-login:hover, .btn-cadastro:hover {
   background: #fff;
   border: solid 1px black;
 }
-
+*/
 /******************Configuração Sticky Header**********************/
 .sticky {
   position: fixed;
@@ -246,7 +247,7 @@ header .btn-login:hover, .btn-cadastro:hover {
 
 /************* Third Section *****************/
 
-.third{
+.third-section{
   width: 100%;
   height: auto;
   width: 100%;
@@ -296,7 +297,7 @@ header .btn-login:hover, .btn-cadastro:hover {
   font-size: 0.9rem;
 }
 
-.third .btn{
+.third-section .btn{
   background: #ffeb3b;
   color: black;
   font-size: 1rem;

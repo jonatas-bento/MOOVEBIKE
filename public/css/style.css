@@ -36,13 +36,12 @@
     box-sizing: border-box;
   }
   
-  .second,
-   footer{
+  .second-section {
     background-image: url(/img/backgrounds-texture-01-1920x589.jpg);
     height: auto;
   }
   
-  .third,
-  .fourth{
+  .third-section,
+  .fourth-section{
     background-image: url(/img/background-body-1920x593.jpg);
   }

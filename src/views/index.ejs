@@ -21,19 +21,20 @@
 
         <%- include('partials/header.ejs') %>
 
-            <div class="slider">
-                <figure>
-                    <img src="img/background-02-1920x800.jpg" alt="">
-                    <img src="img/background-03-1920x800.jpg" alt="">
-                    <img src="img/background-04-1920x800.jpg" alt="">
-                    <img src="img/background-02-1920x800.jpg" alt="">
-                </figure>
 
-                <div class="content">
-                    <h1><span>Comece a Pedalar Já</span></h1><br>
-                    <h5>Contrate um plano e comece sua trajetória para uma vida mais saudável.</h5><br><br>
-                    <a href="/planos" class="btn-planos">Nossos Planos</a>
-                </div>
+        <div class="slider">
+            <figure>
+                <img src="img/background-02-1920x800.jpg" alt="">
+                <img src="img/background-03-1920x800.jpg" alt="">
+                <img src="img/background-04-1920x800.jpg" alt="">
+                <img src="img/background-02-1920x800.jpg" alt="">
+            </figure>
+
+            <div class="content">
+                <h1><span>Comece a Pedalar Já</span></h1><br>
+                <h5>Contrate um plano e comece sua trajetória para uma vida mais saudável.</h5><br><br>
+                <a href="/planos" class="btn-planos">Nossos Planos</a>
+            </div>
     </section>
 
     <!--Second Section-->
@@ -47,17 +48,17 @@
 
             <div class="boxes-second-section">
                 <% rules.forEach((rule)=> { %>
-                    <div class="box-second">
-                        <img class="numbers" src="<%=rule.photo%> " alt="">
-                        <h3>
-                            <%=rule.title%>
-                        </h3>
-                        <hr class="division-insidebox">
-                        <p>
-                            <%=rule.info%>
-                        </p>
-                    </div>
-                    <% }) %>
+                <div class="box-second">
+                    <img class="numbers" src="<%=rule.photo%> " alt="">
+                    <h3>
+                        <%=rule.title%>
+                    </h3>
+                    <hr class="division-insidebox">
+                    <p>
+                        <%=rule.info%>
+                    </p>
+                </div>
+                <% }) %>
             </div>
         </div>
 
@@ -75,24 +76,24 @@
 
             <div class="boxes-third-section">
                 <% packages.forEach((pack)=> { %>
-                    <div class="box-third">
-                        <div class="plano">
-                            <h3>
-                                <%= pack.name %>
-                            </h3>
-                        </div>
-                        <div class="valor">
-                            <%= pack.price %>
-                        </div>
-                        <div class="texto">
-                            <span class="periodo">
-                                <%= pack.period %>
-                            </span><br>
-                            <span class="aviso">*Checar planos para Moove Elétrica</span>
-                        </div>
-                        <button class="btn">Comprar Agora!</button>
+                <div class="box-third">
+                    <div class="plano">
+                        <h3>
+                            <%= pack.name %>
+                        </h3>
                     </div>
-                    <% }) %>
+                    <div class="valor">
+                        <%= pack.price %>
+                    </div>
+                    <div class="texto">
+                        <span class="periodo">
+                            <%= pack.period %>
+                        </span><br>
+                        <span class="aviso">*Checar planos para Moove Elétrica</span>
+                    </div>
+                    <button class="btn">Comprar Agora!</button>
+                </div>
+                <% }) %>
             </div>
         </div>
     </section>
@@ -108,15 +109,15 @@
 
             <div class="boxes-fourth-section">
                 <% bikes.forEach((bike)=> { %>
-                    <div class="box-fourth">
-                        <div class="text-products">
-                            <a href="#">
-                                <%=bike.name%>
-                            </a>
-                        </div>
-                        <a href="#"><img src="<%=bike.photo%>"></a>
+                <div class="box-fourth">
+                    <div class="text-products">
+                        <a href="#">
+                            <%=bike.name%>
+                        </a>
                     </div>
-                    <% }) %>
+                    <a href="#"><img src="<%=bike.photo%>"></a>
+                </div>
+                <% }) %>
             </div>
         </div>
     </section>
@@ -127,7 +128,7 @@
 
 
 
-        <script src="/js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
 
 </html>

@@ -78,3 +78,16 @@ function initMap() {
     });
   });
 }
+
+
+const divDrop = document.querySelector('#dropdown-menu');
+
+function addActive() {
+    
+        divDrop.classList.add("active");
+        
+}
+
+function moveBackTotheOldStage() {
+    divDrop.classList.remove("active")   
+}

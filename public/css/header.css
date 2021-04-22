@@ -81,6 +81,18 @@ header .btn-login:hover,
   height: 0;
 }
 
+#dropdown-menu {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background-color: #499C92;
+  text-decoration: none;
+  z-index: 50;
+  transition: all 0.3s ease;
+  transform: translateY(-120%);
+  top: 51px;
+}
+
 /******************Configuração Sticky Header**********************/
 .sticky {
   position: fixed;
@@ -114,18 +126,13 @@ header .btn-login:hover,
 
     width: 2rem;
     height: 2rem;
-
     position: absolute;
     right: 18px;
+    cursor: pointer;
   }
 
-  /*.dropdown-menu {
-    width: 100%;
-    height: 100%;
-    position: fixed;
-    background-color: teal;
-    text-decoration: none;
-    z-index: 50;
+  #dropdown-menu.active {
+    transform: translateY(0);
   }
 
   .dropdown-itens {
@@ -137,8 +144,21 @@ header .btn-login:hover,
     height: 100%;
     list-style: none;
     font-family: 'Roboto';
+    font-size: 1.5rem;
+  }
+
+  .dropdown-itens li a {
+
+    text-decoration: none;
+    color: #fff;
     font-size: 2rem;
-  }*/
+    font-weight: 600;
+  }
+
+  .dropdown-itens li a:hover {
+    color: #ffeb3b;
+  }
+
 
   #headerTopo {
     background-color: rgb(74, 214, 168);

@@ -7,7 +7,7 @@
 }
 
 .sticky .navegador li a:hover {
-  background-color:#ffeb3b;
+  background-color: #ffeb3b;
 }
 
 /******************Configuração Slide Show**********************/
@@ -30,27 +30,34 @@
 }
 
 @keyframes slider {
-  0% { 
-    left: 0; 
+  0% {
+    left: 0;
   }
-  25% { 
-    left: 0; 
+
+  25% {
+    left: 0;
   }
-  30% { 
-    left: -100%; 
+
+  30% {
+    left: -100%;
   }
-  55% { 
-    left: -100%; 
+
+  55% {
+    left: -100%;
   }
+
   60% {
     left: -200%;
   }
+
   85% {
     left: -200%;
   }
+
   90% {
     left: -300%;
   }
+
   100% {
     left: -300%;
   }
@@ -64,13 +71,13 @@
   left: 50%;
   z-index: 10;
   transform: translate(-50%, -50%);
-  
+
 }
 
 .slider .content h1 {
   box-sizing: border-box;
   color: #fff;
-  font-size: 4rem;
+  font-size: 3rem;
   font-weight: 600;
 }
 
@@ -108,9 +115,9 @@
 
 .title h2 {
   font-size: 2.5rem;
-    font-weight: bold;
-    padding: 11px;
-    margin: 70px 0px 0px 0px;
+  font-weight: bold;
+  padding: 11px;
+  margin: 70px 0px 0px 0px;
 }
 
 .rules .title {
@@ -118,12 +125,12 @@
 }
 
 .packages .title,
-.products .title{
+.products .title {
   color: rgb(31, 41, 50);
 }
 
-.division{
-  background-color:rgb(74, 214, 168);
+.division {
+  background-color: rgb(74, 214, 168);
   width: 50px;
   height: 3px;
   padding: 0;
@@ -138,13 +145,13 @@
 }
 
 .third-section,
-.fourth-section{
+.fourth-section {
   background-image: url(/img/background-body-1920x593.jpg);
 }
 
 /************* Second Section *****************/
 
-.division-insidebox{
+.division-insidebox {
   background-color: rgb(74, 214, 168);
   width: 25px;
   height: 2px;
@@ -174,21 +181,21 @@
   height: 100%;
   display: inline-block;
   margin: 20px;
-  text-align: center; 
+  text-align: center;
   color: #fff;
- }
-
-.box-second h3{
-  font-size: 1.5rem;
-  padding: 5px; 
 }
 
-.box-second p{
+.box-second h3 {
+  font-size: 1.5rem;
+  padding: 5px;
+}
+
+.box-second p {
   line-height: 1.5rem;
   padding: 10px;
 }
 
-.numbers{
+.numbers {
   width: auto;
   height: 50px;
   display: block;
@@ -212,11 +219,11 @@
 
 /************* Third Section *****************/
 
-.third-section{
+.third-section {
   width: 100%;
   height: auto;
   width: 100%;
-  text-align: center;    
+  text-align: center;
 }
 
 .boxes-third-section {
@@ -225,7 +232,7 @@
   justify-content: space-around;
 }
 
-.box-third{
+.box-third {
   width: 30%;
   height: 350px;
   background-color: rgb(74, 214, 168);
@@ -237,7 +244,7 @@
 .plano {
   color: #fff;
   padding: 20px;
-  font-size: 1.5rem;   
+  font-size: 1.5rem;
 }
 
 .valor {
@@ -254,7 +261,7 @@
 }
 
 .periodo {
-  font-weight: bold;  
+  font-weight: bold;
   font-size: 1.2rem;
 }
 
@@ -262,7 +269,7 @@
   font-size: 0.9rem;
 }
 
-.third-section .btn{
+.third-section .btn {
   background: #ffeb3b;
   color: black;
   font-size: 1rem;
@@ -273,10 +280,10 @@
   border-radius: 5px;
   transition: all .3s ease-in-out;
   border: solid 1px #ffeb3b;
-  margin-left: 10px; 
+  margin-left: 10px;
 }
 
-.third .btn:hover{
+.third .btn:hover {
   background: #fff;
   border: solid 1px black;
 }
@@ -289,7 +296,7 @@
   flex-wrap: wrap;
 }
 
-.box-fourth{
+.box-fourth {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -300,11 +307,13 @@
   width: 600px;
   height: 400px;
 }
+
 .box-fourth img {
   max-width: 100%;
   opacity: 0.7;
 }
-.text-products{
+
+.text-products {
   display: flex;
 }
 
@@ -315,11 +324,12 @@
   text-decoration: none;
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.75);
   color: white;
-  z-index: 2; 
+  z-index: 2;
 }
+
 a:hover {
   cursor: pointer;
-  color:rgb(74, 214, 168);
+  color: rgb(74, 214, 168);
 }
 
 /* ---------------FOOTER-------------------------- */
@@ -335,11 +345,11 @@ footer {
   justify-content: space-around;
   width: 60%;
   padding: 20px;
-  margin-top: 40px; 
+  margin-top: 40px;
 }
 
 footer .navegador-1,
-footer .navegador-2{
+footer .navegador-2 {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -351,16 +361,16 @@ footer .navegador-2 li {
   margin: 12px 5px;
 }
 
-footer h3{
+footer h3 {
   font-size: 1.2rem;
   font-weight: bold;
   color: rgb(74, 214, 168);
   padding: 5px;
 }
 
-footer a{
+footer a {
   text-decoration: none;
-  color: #fff; 
+  color: #fff;
 }
 
 footer a:hover {
@@ -375,8 +385,8 @@ footer a:hover {
 }
 
 .midias {
-display: flex;
-justify-content: space-evenly;
+  display: flex;
+  justify-content: space-evenly;
 
 }
 
@@ -389,27 +399,27 @@ justify-content: space-evenly;
 } */
 
 
-#btnScrolltoTop{
+#btnScrolltoTop {
   position: fixed;
   right: 10px;
   bottom: 5px;
   width: 40px;
   height: 40px;
   border-radius: 50px;
-  background-color:#1f2932;
+  background-color: #1f2932;
   box-shadow: 0 0 10 rgba(0, 0, 0, 0.75);
   border: none;
   outline: none;
   cursor: pointer;
 }
 
-#btnScrolltoTop::before{
+#btnScrolltoTop::before {
   content: '\02C4';
-  font-size:large;
+  font-size: large;
   font-weight: bolder;
   color: #ffff;
 }
 
-#btnScrolltoTop:active{
-  background-color:rgb(74, 214, 168);
+#btnScrolltoTop:active {
+  background-color: rgb(74, 214, 168);
 }

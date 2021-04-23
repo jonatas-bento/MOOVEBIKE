@@ -5,51 +5,50 @@
   font-family: 'Roboto', sans-serif;
 }
 
-
 body,
 html {
   max-width: 1600px;
   margin: 0 auto;
 }
 
+/*Precisa?*/
 @media (max-width:1600px) {
   html {
-    font-size: 100%;
-    /*16px*/
+    font-size: 100%; /*16px*/
   }
 }
 
-@media (max-width:1069px) {
+/*De 1200px para baixo*/
+@media (max-width:1200px) {
   html {
-    font-size: 93.75%;
-    /*15px*/
+    font-size: 93.75%; /*15px*/
   }
 }
 
-@media (max-width: 950px) {
+/*De 980px para baixo*/
+@media(max-width:980px) {
   html {
-    font-size: 87.5%;
-    /*14px*/
+    font-size: 87.5%; /*14px*/
   }
 }
 
+/*De 720px para baixo*/
 @media (max-width: 768px) {
   html {
-    font-size: 81.25%;
-    /*13px*/
+    font-size: 81.25%; /*13px*/
   }
 }
 
+/*De 420px para baixo*/
 @media (max-width: 420px) {
   html {
-    font-size: 75%;
-    /*12px*/
+    font-size: 75%; /*12px*/
   }
 }
 
+/*Precisa?*/
 @media (max-width: 320px) {
   html {
-    font-size: 62.5%;
-    /*10px*/
+    font-size: 62.5%; /*10px*/
   }
 }

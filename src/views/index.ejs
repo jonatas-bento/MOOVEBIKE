@@ -20,21 +20,21 @@
     <section class="first-section">
 
         <%- include('partials/header.ejs') %>
-        <%- include('partials/menuheader.ejs') %>
+            <%- include('partials/menuheader.ejs') %>
 
-        <div class="slider">
-            <figure>
-                <img src="img/background-02-1920x800.jpg" alt="">
-                <img src="img/background-03-1920x800.jpg" alt="">
-                <img src="img/background-04-1920x800.jpg" alt="">
-                <img src="img/background-02-1920x800.jpg" alt="">
-            </figure>
+                <div class="slider">
+                    <figure>
+                        <img src="img/background-02-1920x800.jpg" alt="">
+                        <img src="img/background-03-1920x800.jpg" alt="">
+                        <img src="img/background-04-1920x800.jpg" alt="">
+                        <img src="img/background-02-1920x800.jpg" alt="">
+                    </figure>
 
-            <div class="content">
-                <h1><span>Comece a Pedalar Já</span></h1><br>
-                <h5>Contrate um plano e comece sua trajetória para uma vida mais saudável.</h5><br><br>
-                <a href="/planos" class="btn-planos">Nossos Planos</a>
-            </div>
+                    <div class="content">
+                        <h1><span>Comece a Pedalar Já</span></h1><br>
+                        <h5>Contrate um plano e comece sua trajetória para uma vida mais saudável.</h5><br><br>
+                        <a href="/planos" class="btn-planos">Nossos Planos</a>
+                    </div>
     </section>
 
     <!--Second Section-->
@@ -48,17 +48,17 @@
 
             <div class="boxes-second-section">
                 <% rules.forEach((rule)=> { %>
-                <div class="box-second">
-                    <img class="numbers" src="<%=rule.photo%> " alt="">
-                    <h3>
-                        <%=rule.title%>
-                    </h3>
-                    <hr class="division-insidebox">
-                    <p>
-                        <%=rule.info%>
-                    </p>
-                </div>
-                <% }) %>
+                    <div class="box-second">
+                        <img class="numbers" src="<%=rule.photo%> " alt="">
+                        <h3>
+                            <%=rule.title%>
+                        </h3>
+                        <hr class="division-insidebox">
+                        <p>
+                            <%=rule.info%>
+                        </p>
+                    </div>
+                    <% }) %>
             </div>
         </div>
 
@@ -67,16 +67,16 @@
 
     <!--Third Section-->
     <section class="third-section">
-        <div class="packages">
-            <div class="title">
-                <h2><span>Nossos Planos</span></h2>
-            </div>
-            <br>
-            <hr class="division">
 
-            <div class="boxes-third-section">
-                <% packages.forEach((pack)=> { %>
-                <div class="box-third">
+        <div class="title">
+            <h2><span>Nossos Planos</span></h2>
+        </div>
+        <br>
+        <hr class="division">
+
+        <div class="container">
+            <% packages.forEach((pack)=> { %>
+                <div class="box">
                     <div class="plano">
                         <h3>
                             <%= pack.name %>
@@ -94,8 +94,8 @@
                     <button class="btn">Comprar Agora!</button>
                 </div>
                 <% }) %>
-            </div>
         </div>
+
     </section>
 
     <!--Fourth Section-->
@@ -109,15 +109,15 @@
 
             <div class="boxes-fourth-section">
                 <% bikes.forEach((bike)=> { %>
-                <div class="box-fourth">
-                    <div class="text-products">
-                        <a href="#">
-                            <%=bike.name%>
-                        </a>
+                    <div class="box-fourth">
+                        <div class="text-products">
+                            <a href="#">
+                                <%=bike.name%>
+                            </a>
+                        </div>
+                        <a href="#"><img src="<%=bike.photo%>"></a>
                     </div>
-                    <a href="#"><img src="<%=bike.photo%>"></a>
-                </div>
-                <% }) %>
+                    <% }) %>
             </div>
         </div>
     </section>
@@ -128,7 +128,7 @@
 
 
 
-    <script src="/js/script.js"></script>
+        <script src="/js/script.js"></script>
 </body>
 
 </html>

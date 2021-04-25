@@ -39,30 +39,26 @@
 
     <!--Second Section-->
     <section class="second-section">
-        <div class="rules">
-            <div class="title">
-                <h2><span>Regras Utilização</span></h2>
-            </div>
-            <br>
-            <hr class="division">
-
-            <div class="boxes-second-section">
-                <% rules.forEach((rule)=> { %>
-                    <div class="box-second">
-                        <img class="numbers" src="<%=rule.photo%> " alt="">
-                        <h3>
-                            <%=rule.title%>
-                        </h3>
-                        <hr class="division-insidebox">
-                        <p>
-                            <%=rule.info%>
-                        </p>
-                    </div>
-                    <% }) %>
-            </div>
+        <div class="title">
+            <h2><span>Regras Utilização</span></h2>
         </div>
+        <br>
+        <hr class="division">
 
-
+        <div class="container">
+            <% rules.forEach((rule)=> { %>
+                <div class="box">
+                    <img class="numbers" src="<%=rule.photo%> " alt="">
+                    <h3>
+                        <%=rule.title%>
+                    </h3>
+                    <hr class="division-insidebox">
+                    <p>
+                        <%=rule.info%>
+                    </p>
+                </div>
+                <% }) %>
+        </div>
     </section>
 
     <!--Third Section-->
@@ -100,35 +96,31 @@
 
     <!--Fourth Section-->
     <section class="fourth-section">
-        <div class="products">
-            <div class="title">
-                <h2><span>Nossas MOOVE's</span></h2>
-            </div>
-            <br>
-            <hr class="division">
 
-            <div class="boxes-fourth-section">
-                <% bikes.forEach((bike)=> { %>
-                    <div class="box-fourth">
-                        <div class="text-products">
-                            <a href="#">
-                                <%=bike.name%>
-                            </a>
-                        </div>
-                        <a href="#"><img src="<%=bike.photo%>"></a>
+        <div class="title">
+            <h2><span>Nossas MOOVE's</span></h2>
+        </div>
+        <br>
+        <hr class="division">
+
+        <div class="container">
+            <% bikes.forEach((bike)=> { %>
+                <div class="box">
+                    <div class="text-products">
+                        <a href="#">
+                            <%=bike.name%>
+                        </a>
                     </div>
-                    <% }) %>
-            </div>
+                    <a href="#"><img src="<%=bike.photo%>"></a>
+                </div>
+                <% }) %>
         </div>
     </section>
 
-
     <%- include('partials/footer') %>
 
-
-
-
         <script src="/js/script.js"></script>
+
 </body>
 
 </html>

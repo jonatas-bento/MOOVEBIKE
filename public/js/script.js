@@ -79,15 +79,14 @@ function initMap() {
   });
 }
 
+/*********Menu *******************/
 
 const divDrop = document.querySelector('#dropdown-menu');
 
 function addActive() {
-    
-        divDrop.classList.add("active");
-        
+  divDrop.classList.add("active");
 }
 
-function moveBackTotheOldStage() {
-    divDrop.classList.remove("active")   
+function moveBackToTheOldStage() {
+  divDrop.classList.remove("active")
 }

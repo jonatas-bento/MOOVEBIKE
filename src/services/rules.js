@@ -7,17 +7,17 @@ const rules = [
     {
         photo: "/img/two-removebg-preview.png",
         title: "PLANO",
-        info: "Escolha um plano. Temos planos: diário, semanal, quinzenal e mensal.",
+        info: "Escolha um plano. Temos planos: diário, semanal, mensal e anual.",
     },
     {
         photo: "/img/threepg-removebg-preview.png",
-        title: "RESERVA",
-        info: "Faça sua reserva online.",
+        title: "RETIRADA",
+        info: "Escolha a loja mais próxima de você para retirar.",
     },
     {
         photo: "/img/four-removebg-preview.png",
-        title: "RETIRADA/DEVOLUÇÃO",
-        info: "Escolha a loja mais próxima de você para retirar e devolver.",
+        title: "DEVOLUÇÃO",
+        info: "Devolva em qualquer uma das lojas.",
     }
 ]
 

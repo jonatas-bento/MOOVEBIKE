@@ -90,3 +90,11 @@ function addActive() {
 function moveBackToTheOldStage() {
   divDrop.classList.remove("active")
 }
+
+/*********NEWSLETTER *******************/
+
+function clicou() {
+  const clicar = window.document.getElementById("enviarEmail")
+  clicar = window.alert("Email Cadastrado")
+}
+

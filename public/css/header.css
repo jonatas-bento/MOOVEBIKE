@@ -83,6 +83,7 @@ header .btn-login:hover,
 .btn-cadastro:hover {
   background: #fff;
   border: solid 1px black;
+  color: black;
 }
 
 .hamburguer {
@@ -131,6 +132,7 @@ header .btn-login:hover,
   .btn-cadastro {
     display: none;
   }
+  
 
   header .btn-login{
     position: fixed;

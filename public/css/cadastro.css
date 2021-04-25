@@ -1,18 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap');
-* {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    box-sizing: border-box;
-    font-family: 'Roboto', Arial, Helvetica, sans-serif;
-}
-
 body {
     background: url(/img/backgrounds-texture-01-1920x589.jpg);
-    color: white;
-    font-weight: 500;
     display: flex;
-    min-height: 100vh;
 }
 
 header a {
@@ -37,13 +25,13 @@ main {
     justify-content: center;
     width: 400px;
     padding: 10px;
-    margin: auto;
+    margin: 0 auto;
 }
 
 main h1 {
     color: rgb(74, 214, 168);
     font-size: 3rem;
-    margin-top: 20px;
+    margin-top: 80px;
 }
 
 h1:after {
@@ -58,6 +46,7 @@ h1:after {
 main h2 {
     color: rgb(74, 214, 168);
     font-size: 22px;
+    margin-top: 2rem;
     margin-bottom: 2rem;
 }
 
@@ -101,8 +90,10 @@ button[type="submit"] {
     font-size: 20px;
     border: 1px solid #fff;
     text-shadow: 0 1px 1px #333;
+    margin-bottom: 2rem;
 }
 
 button[type="submit"]:hover {
     background: rgb(84, 250, 195);
+    transition: all .3s ease-in-out;
 }

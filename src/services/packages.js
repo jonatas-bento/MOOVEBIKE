@@ -22,13 +22,16 @@ const packages = [
       name: "SUPER MOOVE",
       price: "R$ 239,90",
       period: "Plano Anual",
-    }
+    },
+
   ]
   
   const getPackages = () => {
     return packages
   }
-  
+
+ 
   module.exports = {
-    getPackages
+    getPackages, 
+
   }

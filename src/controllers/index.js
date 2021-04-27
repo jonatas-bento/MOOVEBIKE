@@ -30,7 +30,9 @@ const faleconosco = function(req, res) {
   }
 
   const planos = function(req, res) {
-    res.render('planos');
+    const packages = getPackages();
+    
+    res.render('planos',{packages });
   }
 
   module.exports = {

@@ -1,15 +1,27 @@
 # MOOVEBIKE
 
-Aqui estamos desenvolvendo nosso projeto integrado.
+Aqui estamos desenvolvendo nosso projeto integrador
+
+
+## Tecnologias
+ - [Express](https://expressjs.com/pt-br/)
+ - [Ejs](https://ejs.co/)
 
 ## Como utilizar
 
-A princípio estamos elaborando as etapas daquilo o que deve ser uma API para aluguel de bikes
+Clonar o projeto e depois instalar os pacotes com npm
 
-## Contribuições
-Nosso grupo está trabalhando nas etapas desde a concepção de um MVP, Wireframe, assim como a implementação do HTML, CSS e Javascript, necessários ao funcionamento da API.
+```bash
+$ npm install
+```
 
-## Autoria e Licença
+## Rodando local
+
+```bash
+$ npm run dev
+```
+
+## Membros
 
 [Anne Bortoli de Oliveira] (https://github.com/ANNEBORTOLI)
 [Flávio Magalhaes Sipoli] (https://github.com/flavio-sipoli)

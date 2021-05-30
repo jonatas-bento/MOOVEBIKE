@@ -1,7 +1,7 @@
 const { getRules } = require('../services/rules');
 const { getPackages } = require('../services/packages');
 const { getBikes } = require('../services/bikes');
-
+const { getPackagesE} =require('../services/packageselectric');
 
 //Controller Home Page
 
@@ -30,7 +30,10 @@ const faleconosco = function(req, res) {
   }
 
   const planos = function(req, res) {
-    res.render('planos');
+    const packages = getPackages();
+    const packageselectric = getPackagesE()
+    
+    res.render('planos',{packages, packageselectric });
   }
 
   module.exports = {

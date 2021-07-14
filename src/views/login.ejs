@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/login.css">
+
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <a href="/"><img src="/img/Logo_MoovebikeA_modV3.png" alt=""></a>
+    </header>
+    <main>
+        <div id="login">
+            <form action="/login" method="POST">
+                <h1><span>Entrar</span></h1>
+
+                <% if (locals.error) { %>
+                    <div class="alert">
+                        <%= locals.error %>
+                    </div>
+                    <br>
+                    <% } %>
+
+                        <p>
+                            <label for="email">Email</label>
+                            <input id="email" name="email" required="required" type="text"
+                                placeholder="ex:seuemail@email.com" />
+                        </p>
+
+                        <p>
+                            <label for="password">Senha</label>
+                            <input id="password" name="password" required="required" type="password"
+                                placeholder="ex:123abc*" />
+                        </p>
+
+
+                        <p>
+                            <button type="submit">Entrar</button>
+                        </p>
+
+                        <p class="link">
+                            Ainda não tem conta?
+                            <a href="/register">Cadastre-se</a>
+                        </p>
+
+                        <p class="link">
+                            <a href="/resetPassword">Esqueceu sua senha?</a>
+                        </p>
+            </form>
+        </div>
+
+    </main>
+    <!--<script src="/js/script.js"></script>-->
+</body>
+
+</html>

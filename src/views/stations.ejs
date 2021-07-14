@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mapas Estações</title>
+    <link rel="stylesheet" href="/css/estacoes.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/footer.css">
+
+    <link rel="stylesheet" href="/css/header.css">
+</head>
+
+<body>
+    <section class="first">
+        <%- include('partials/header.ejs') %>
+            <div class="mapa-das-estacoes">
+                <span>
+                    Mapa das Estações
+                </span>
+            </div>
+            <div id="map"></div>
+
+            <%- include('partials/footer') %>
+
+                <script
+                    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRRrj8BIJPaJI0ynk-eJDpKoNGlcllBic&callback=initMap&libraries=&v=weekly"
+                    async>
+                    </script>
+                <script src="/js/script.js"></script>
+</body>
+
+</html>

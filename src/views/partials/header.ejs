@@ -1,0 +1,27 @@
+<header id="headerTopo" class>
+    <div class="logo"><a href="/">MooveBike Logo</a>
+    </div>
+    <nav>
+        <ul class="navegador">
+            <li><a href="/">Home</a></li>
+            <li><a href="/packages">Planos</a></li>
+            <li><a href="/stations">Estações</a></li>
+            <li><a href="/dashboard">Reservas</a></li>
+        </ul>
+    </nav>
+
+    <div class="btns-header">
+        <% if(locals.isLoggedAdmin){ %>
+            <a class="btn-admin" href="/admin">Administrador</a>
+            <% } if (locals.isLogged) { %>
+                <a class="btn-logout" href="/logout">Sair</a>
+                <% } else{ %>
+                    <a class="btn-cadastro" href="/register">Cadastre-se</a>
+                    <a class="btn-login" href="/login"><img class="person" src="/img/users-white.svg">Login</a>
+                    <% } %>
+    </div>
+
+    <span onclick="addActive()" class="hamburguer"></span>
+
+
+</header>

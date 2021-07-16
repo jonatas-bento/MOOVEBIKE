@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
-    <link rel="stylesheet" href="/css/index.css">
+    <link rel="stylesheet" href="/css/home.css">
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -62,36 +62,35 @@
     </section>
 
     <!--Third Section-->
+    <!--Third Section-->
     <section class="third-section">
-
         <div class="title">
             <h2><span>Nossos Planos</span></h2>
         </div>
         <br>
         <hr class="division">
-
         <div class="container">
             <% packages.forEach((pack)=> { %>
-                <div class="box">
-                    <div class="plano">
-                        <h3>
-                            <%= pack.name %>
-                        </h3>
+                <% if(!pack.electric){ %>
+                    <div class="box">
+                        <div class="plano">
+                            <h3>
+                                <%= pack.name %>
+                            </h3>
+                        </div>
+                        <div class="valor">
+                            R$ <%= pack.price %>
+                        </div>
+                        <div class="texto">
+                            <span class="periodo">
+                                <%= pack.period %>
+                            </span><br>
+                            <span class="aviso">*Checar planos para Moove Elétrica</span>
+                        </div>
+                        <button class="btn">Comprar Agora!</button>
                     </div>
-                    <div class="valor">
-                        <%= pack.price %>
-                    </div>
-                    <div class="texto">
-                        <span class="periodo">
-                            <%= pack.period %>
-                        </span><br>
-                        <span class="aviso">*Checar planos para Moove Elétrica</span>
-                    </div>
-                    <button class="btn">Comprar Agora!</button>
-                </div>
-                <% }) %>
+                    <% }}) %>
         </div>
-
     </section>
 
     <!--Fourth Section-->

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/adminRentals.css">
+
+    <title>Login</title>
+</head>
+
+<body>
+    <header>
+        <a href="/admin"><img src="/img/Logo_MoovebikeA_modV3.png" alt=""></a>
+    </header>
+    <main>
+
+        <h2>PACOTES ATIVOS</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <td>ID</td>
+                    <td>Usuário</td>
+                    <td>Pacote</td>
+                    <td>Preço</td>
+                    <td>Período</td>
+                    <td>Bike Elétrica</td>
+                    <td>Retirada</td>
+                    <td>Devolução</td>
+                    <td>Atual Devolução</td>
+                    <td>Pacote Ativo</td>
+                    <td>DESATIVAR</td>
+
+                </tr>
+            </thead>
+            <tbody>
+                <% rentals.forEach((rental)=> { %>
+                    <tr>
+                        <td>
+                            <%=rental.id%>
+                        </td>
+                        <td>
+                            <%=rental.user_name%>
+                        </td>
+                        <td>
+                            <%=rental.pack_name%>
+                        </td>
+                        <td>
+                            <%=rental.pack_price%>
+                        </td>
+                        <td>
+                            <%=rental.pack_period%>
+                        </td>
+                        <td>
+                            <%=rental.electric%>
+                        </td>
+                        <td>
+                            <%=rental.pick_up%>
+                        </td>
+                        <td>
+                            <%=rental.drop_off%>
+                        </td>
+                        <td>
+                            <%=rental.actual_drop%>
+                        </td>
+                        <td>
+                            <%=rental.packActive%>
+                        </td>
+                        <td>BOTÃO</td>
+                        <% }) %>
+                    </tr>
+            </tbody>
+        </table>
+    </main>
+</body>
+
+</html>

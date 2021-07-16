@@ -34,11 +34,13 @@ header .navegador {
   flex-wrap: wrap;
   margin: 10px 0;
   margin-left: 70px;
+
+
 }
 
 header .navegador li {
   list-style: none;
-  margin: 0 20px;
+  margin: 0 40px;
 }
 
 header .navegador li a {
@@ -61,13 +63,15 @@ header .navegador li a:hover {
 } */
 
 header img .person{
-  padding: 10px
+  padding: 10px;
+  display: none;
 }
 
 header .btn-login,
 .btn-cadastro,
 .btn-logout,
-.btn-admin {
+.btn-admin,
+.btn-user{
   background: #ffeb3b;
   color: black;
   text-decoration: none;
@@ -91,7 +95,8 @@ header .btn-login > img{
 header .btn-login:hover,
 .btn-cadastro:hover,
 .btn-logout:hover,
-.btn-admin:hover {
+.btn-admin:hover,
+.btn-user:hover{
   background: #fff;
   border: solid 1px black;
   color: black;

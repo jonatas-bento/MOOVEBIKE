@@ -1,6 +1,7 @@
 body {
   background: url(/img/background-body-1920x593.jpg)
 }
+
 header a {
   background-color: rgb(74, 214, 168);
   position: absolute;
@@ -14,9 +15,14 @@ header a {
 header img {
   margin-left:55px;
 }
+h2 {
+  margin-top: 60px;
+  text-align: center;
+  
+}
 table {
   margin-top: 60px;
-  max-width: 80%;    
+  max-width: 90%;    
 }
 thead {
   font-weight: bold;

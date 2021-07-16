@@ -41,16 +41,6 @@ class Controller {
     }
   }
 
-  // async edit(req, res) {
-  //   const { packId } = req.params;
-  //   const { name, price, period, eletric } = req.body;
-  //   try {
-  //     await PackService.edit({ id: packId, name, price, period, eletric });
-  //     res.status(201).json({ message: "Package updated successfully" });
-  //   } catch (err) {
-  //     res.status(400).json({ message: err.message });
-  //   }
-  // }
 
   async remove(req, res) {
     const { packId } = req.params
@@ -82,6 +72,7 @@ class Controller {
     const { packId } = req.params;
     try {
       const rules = await PackService.findAllRules(packId);
+      res.render('adminPacks', { rules })
       rules.length == 0 ?
         res.status(200).json({ message: "No rules registered for this package yet." })
         :

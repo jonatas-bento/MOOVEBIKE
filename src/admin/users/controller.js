@@ -5,10 +5,7 @@ class Controller {
   async list(req, res) {
     try {
       const users = await UsersService.findAll()
-      users.length == 0 ?
-        res.status(200).json({ message: "No users registered yet" })
-        :
-        res.status(200).json(users);
+      res.render('adminUsers', { users })
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
@@ -18,7 +15,6 @@ class Controller {
     try {
       const { userId } = req.params
       const userOne = await UsersService.findOne(userId)
-      res.status(200).json(userOne)
     }
     catch (err) {
       res.status(500).json({ message: err.message });
@@ -29,12 +25,11 @@ class Controller {
     try {
       const userEmail = req.body.email
       const user = await UsersService.findByEmail(userEmail)
-      res.status(200).json(user)
+      return user
     }
     catch (err) {
       res.status(500).json({ message: err.message });
     }
-    console.log(userEmail)
   }
 
   async edit(req, res) {

@@ -17,10 +17,7 @@ class Controller {
   async listPending(req, res) {
     try {
       const rentals = await RentalService.findPending();
-      rentals.length == 0 ?
-        res.status(200).json({ message: "No rentals pending activation" })
-        :
-        res.status(200).json(rentals);
+      res.render('adminRentalsPending', { rentals });
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
@@ -29,10 +26,7 @@ class Controller {
   async listActives(req, res) {
     try {
       const rentals = await RentalService.findActives();
-      rentals.length == 0 ?
-        res.status(200).json({ message: "No rentals active at the moment" })
-        :
-        res.status(200).json(rentals);
+      res.render('adminRentalsActive', { rentals });
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
@@ -41,10 +35,7 @@ class Controller {
   async listInactives(req, res) {
     try {
       const rentals = await RentalService.findInactives();
-      rentals.length == 0 ?
-        res.status(200).json({ message: "No rentals inactive at the moment" })
-        :
-        res.status(200).json(rentals);
+      res.render('adminRentalsInactive', { rentals });
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
@@ -79,12 +70,9 @@ class Controller {
       packActive: false
     }
 
-    // Retorna os dias de atraso
     const delayDays = RentalService.getDelayDays(rentalData.drop_off, today);
-    // Calcula multa com base no valor do plano
     const fine = RentalService.getFine(delayDays, packPrice);
-    //# Passar Parâmetros para a view
-    console.log(`Dias de Atrado = ${delayDays} e Multa = ${fine}`)
+    //console.log(`Dias de Atraso = ${delayDays} e Multa = ${fine}`)
 
     try {
       await RentalService.desactivate(rentalData)

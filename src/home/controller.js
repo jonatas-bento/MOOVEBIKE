@@ -1,7 +1,6 @@
 const { getRules } = require('./services/rules');
-const { getPackages } = require('./services/packages');
 const { getBikes } = require('./services/bikes');
-const { getPackagesE } = require('./services/packagesElectric');
+const PackService = require('./services/packages')
 const UsersService = require('../admin/users/service')
 const AuthService = require('../auth/auth.service')
 const { validationResult } = require('express-validator');
@@ -9,24 +8,38 @@ const { validationResult } = require('express-validator');
 
 class HomeController {
 
-  static homePage(req, res) {
-    const rules = getRules();
-    const packages = getPackages();
+  static async homePage(req, res) {
     const bikes = getBikes();
-    res.render('home', { rules, packages, bikes });
+    const rules = getRules();
+    try {
+      const packages = await PackService.getPackages();
+      res.render('home', { rules, packages, bikes });
+    } catch (err) {
+      res.status(500).json({ message: err.message });
+    }
   }
-  static packagePage(req, res) {
-    const packages = getPackages();
-    const packagesElectric = getPackagesE()
-    res.render('packages', { packages, packagesElectric });
+
+  static async packagePage(req, res) {
+    try {
+      const packages = await PackService.getPackages();
+      const packRules = await PackService.getPackRule();
+      res.render('packages', { packages, packRules });
+    } catch (err) {
+      res.status(500).json({ message: err.message });
+    }
   }
 
   static stationPage(req, res) {
     res.render('stations')
   }
 
-  static dashboardPage(req, res) {
-    res.render('dashboard')
+  static async dashboardPage(req, res) {
+    if (!req.session.user) {
+      res.redirect('login')
+    } else {
+      //pega o usuário e envia o usuário junto com a view
+      res.render('dashboard')
+    }
   }
 
   static registerPage(req, res) {

@@ -1,0 +1,14 @@
+.row,
+.carrinho {
+  display: flex;
+  justify-content: center;
+}
+
+h5 {
+  text-align: center;
+}
+
+.card-img-top {
+  width: 50px;
+  margin-bottom: 20px;
+}

@@ -61,11 +61,11 @@ class Database {
     return result;
   }
 
-  findAllRules(packId) {
-    return PackInfo.findAll(
-      {
-        where: { pack_id: packId }
-      });
+  findAllRules() {
+    return PackInfo.findAll()
+    // {
+    //   where: { pack_id: packId }
+    // });
   }
 
   editRule(packId, ruleId, rule) {

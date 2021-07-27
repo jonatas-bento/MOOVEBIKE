@@ -1,74 +1,44 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Carrinho Vanilla</title>
-    <link
-      rel="stylesheet"
-      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-      integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
-      integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p"
-      crossorigin="anonymous"
-    />
-  </head>
-  <body>
-    <div class="container">
-      <h1>Carrinho MooveBike</h1>
-      <hr />
-      <div class="row">
-        <div class="col-sm-8">
-          <div class="row loja">
-            <div class="col-sm-4 mb-3">
-              <div class="card">
-                <div class="card loja__item">
-                  <img
-                    class="card-img-top"
-                    src="/img/carrinho2.jpg"
-                    alt="..."
-                  />
-                  <div class="card-body">
-                    <h5 class="card-title"><%chosenPack%></h5>
-                    <small>R$ 300,00</small>
-                    <p class="card-text">
-                      Esse é o nosso pacote <%chosenPack%>
-                    </p>
-                    <button data-value="300" class="btn btn-primary">
-                      Adicionar
-                    </button>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {Informações sobre o pacote adquirido}
-          </div>
-        </div>
-        <div class="col-sm-4 mb-3">
-          <div class="carrinho">
-            <div class="carrinho__itens">
-              <div class="card carrinho__item mb-3">
-                <div class="card-body">
-                  <h5 class="card-title">JSRaiz para FW</h5>
-                  <p class="card-text">
-                    Preco Unidade: R$ 300,00 | Quantidade: 2
-                  </p>
-                  <p class="card-text">Valor: R$ 600,00</p>
-                  <button class="btn btn-danger btn-sm">Remover</button>
-                </div>
-              </div>
-            </div>
-            <div class="carrinho__total mt-2 p-3">
-              <h6>Total: <strong>R$ 600,00</strong></h6>
-            </div>
-          </div>
-        </div>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrinho Vanilla</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+    integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+  <link rel="stylesheet" href="/css/cart.css">
+</head>
+
+<body>
+  <div class="container">
+    <h1>Carrinho MooveBike</h1>
+    <hr />
+    <div class="row">
+      <img class="card-img-top" src="/img/shopping-icon.png" alt="..." />
     </div>
-    <script src="main.js"></script>
-  </body>
+  </div>
+  <h5 class="card-title">Resumo do Pedido</h5>
+
+  <div class="carrinho">
+    <div class="card-text">
+      <p>
+        Pacote: <%=chosenPack.name%>
+      </p>
+      <p>
+        Período: <%=chosenPack.period%>
+      </p>
+      <h6>Total: R$ <%=chosenPack.price%>
+      </h6>
+      <button data-value="300" class="btn btn-primary"> Adicionar</button>
+      <button class="btn btn-danger btn-sm">Remover</button>
+    </div>
+
+  </div>
+
+  <script src="main.js"></script>
+</body>
+
 </html>

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,6 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
     <title>MooveBike Planos</title>
 </head>
+
 <body>
     <%- include('partials/header.ejs') %>
         <section class="third-section">
@@ -38,6 +40,7 @@
                                 </p>
                                 <hr>
                                 <% packRules.forEach((rule)=> { %>
+
                                     <% if(pack.id==rule.pack_id) {%>
                                         <ul>
                                             <li>
@@ -46,18 +49,22 @@
                                         </ul>
                                         <% }}) %>
                             </div>
-                            <button class="btn">
-                                <a href="/cart">Comprar Agora!</a> 
-                            </button>
-                            <% packEletric=packages.filter(function(value){ return (value.period==pack.period &&
+                            <button class="btn"><a href="cart/<%=pack.id%>">Comprar Agora!</a></button>
+
+                            <% packElectric=packages.filter(function(value){ return (value.period==pack.period &&
                                 value.electric==1) })%>
-                                <button class="btn">Elétrica - R$ <%= packEletric[0].price %></button>
+
+                                <button class="btn"><a href="cart/<%=packElectric[0].id%>">Elétrica - R$ <%=
+                                            packElectric[0].price %>
+                                    </a></button>
                         </div>
                         <% }}) %>
             </div>
         </section>
         <%- include('partials/footer') %>
             <script src="/js/script.js"></script>
-</body>
-</html>
 
+
+</body>
+
+</html>

@@ -19,7 +19,7 @@ router.get('/logout', HomeController.doLogout)
 
 //carrinho teste
 
-router.get('/cart', HomeController.cartPage)
+router.get('/cart/:id', HomeController.cartPage)
 router.post('/cart', HomeController.createRental);
 
 router.post('/register', validateRegister, HomeController.doRegister);

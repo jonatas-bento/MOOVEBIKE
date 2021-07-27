@@ -77,7 +77,7 @@ class Service {
     return fine
   }
 
- 
+
 }
 
 const RentalService = new Service();

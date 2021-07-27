@@ -13,7 +13,7 @@ module.exports = {
         allowNull: false
       },
       price: {
-        type: Sequelize.STRING,
+        type: Sequelize.DECIMAL(10, 2),
         allowNull: false
       },
       period: {

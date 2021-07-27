@@ -89,6 +89,10 @@ hr {
     list-style: square inside url("sqpurple.gif");
     margin-top: 0.2rem;
 }
+
+.btn a {
+    text-decoration: none;
+}
 .third-section .btn{
     background: #ffeb3b;
     color: black;

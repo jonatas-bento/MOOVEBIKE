@@ -31,8 +31,8 @@ class Service {
     return createRule(rule, packId);
   }
 
-  findAllRules(packId) {
-    return findAllRules(packId);
+  findAllRules() {
+    return findAllRules();
   }
 
   editRule(packId, ruleId, rule) {

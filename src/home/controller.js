@@ -1,7 +1,7 @@
 const { getRules } = require('./services/rules');
 const { getBikes } = require('./services/bikes');
 const RentalService = require('../admin/rentals/service');
-const PackService = require('./services/packages');
+const PackService = require('../admin/packs/service');
 const UsersService = require('../admin/users/service');
 const AuthService = require('../auth/auth.service');
 const { validationResult } = require('express-validator');
@@ -13,7 +13,7 @@ class HomeController {
     const bikes = getBikes();
     const rules = getRules();
     try {
-      const packages = await PackService.getPackages();
+      const packages = await PackService.findAll();
       res.render('home', { rules, packages, bikes });
     } catch (err) {
       res.status(500).json({ message: err.message });
@@ -22,8 +22,9 @@ class HomeController {
 
   static async packagePage(req, res) {
     try {
-      const packages = await PackService.getPackages();
-      const packRules = await PackService.getPackRule();
+      const packages = await PackService.findAll();
+      const packRules = await PackService.findAllRules();
+      console.log(packRules)
       res.render('packages', { packages, packRules });
     } catch (err) {
       res.status(500).json({ message: err.message });
@@ -35,14 +36,14 @@ class HomeController {
   }
 
   static async dashboardPage(req, res) {
-   
+
     if (!req.session.user) {
       res.redirect('login')
     } else {
-      
+
       try {
         const userId = req.session.user.id;
-        
+
         const activeRental = await RentalService.findOne(userId);
         res.render('dashboard', activeRental);
       }
@@ -128,12 +129,17 @@ class HomeController {
   }
 
   static async cartPage(req, res) {
-    const packId = req.body; //troquei de req.params
-    console.log(packId)
-    const chosenPack = await PackService.findOne(packId);
-    console.log(chosenPack)
-    res.render('cart', { chosenPack })
-    
+    if (!req.session.user) {
+      res.render('login')
+    } else {
+      const packId = req.params.id;
+      try {
+        const chosenPack = await PackService.findOne(packId);
+        res.render('cart', { chosenPack })
+      } catch (err) {
+        res.status(500).json({ message: err.message });
+      }
+    }
   }
 
   static async createRental(req, res) {

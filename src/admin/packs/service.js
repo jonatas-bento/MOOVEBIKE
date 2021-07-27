@@ -1,9 +1,13 @@
-const { findAll, create, edit, remove, restore, createRule, findAllRules, editRule, removeRule, restoreRule } = require('./database');
+const { findAll, findOne, create, edit, remove, restore, createRule, findAllRules, editRule, removeRule, restoreRule } = require('./database');
 
 class Service {
 
   findAll() {
     return findAll();
+  }
+
+  findOne(packId) {
+    return findOne(packId);
   }
 
   create(newPack) {

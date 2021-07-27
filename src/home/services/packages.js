@@ -6,6 +6,11 @@ class Service {
   getPackRule() {
     return PackInfo.findAll()
   }
+
+  findOne(packId) {
+    return Packages.findOne(packId)
+  }
+
 }
 const PackService = new Service();
 module.exports = PackService;

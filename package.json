@@ -10,6 +10,7 @@
     "seed": "npx sequelize db:seed:all"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^5.15.3",
     "cookie-parser": "~1.4.4",
     "debug": "~2.6.9",
     "dotenv-safe": "^8.2.0",

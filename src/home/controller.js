@@ -1,8 +1,9 @@
 const { getRules } = require('./services/rules');
 const { getBikes } = require('./services/bikes');
-const PackService = require('./services/packages')
-const UsersService = require('../admin/users/service')
-const AuthService = require('../auth/auth.service')
+const RentalService = require('../admin/rentals/service');
+const PackService = require('./services/packages');
+const UsersService = require('../admin/users/service');
+const AuthService = require('../auth/auth.service');
 const { validationResult } = require('express-validator');
 
 
@@ -34,11 +35,20 @@ class HomeController {
   }
 
   static async dashboardPage(req, res) {
+   
     if (!req.session.user) {
       res.redirect('login')
     } else {
-      //pega o usuário e envia o usuário junto com a view
-      res.render('dashboard')
+      
+      try {
+        const userId = req.session.user.id;
+        
+        const activeRental = await RentalService.findOne(userId);
+        res.render('dashboard', activeRental);
+      }
+      catch (err) {
+        res.status(500).json({ message: err.message })
+      }
     }
   }
 
@@ -116,6 +126,28 @@ class HomeController {
       res.render('register', { error: err.message })
     }
   }
+
+  static async cartPage(req, res) {
+    const packId = req.body; //troquei de req.params
+    console.log(packId)
+    const chosenPack = await PackService.findOne(packId);
+    console.log(chosenPack)
+    res.render('cart', { chosenPack })
+    
+  }
+
+  static async createRental(req, res) {
+    const userId = req.session.user.id;
+    const packId = req.params.id;
+    const activePack = await RentalService.findOne(userId);
+    if (activePack) {
+      res.render('buyError', { message: 'You have an active rental' })
+    } else {
+      await RentalService.create(userId, packId);
+      res.render('buySuccess', { message: 'Package bought successfully!' });
+    }
+  }
+
 }
 
 module.exports = HomeController

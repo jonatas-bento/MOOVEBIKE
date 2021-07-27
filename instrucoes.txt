@@ -7,9 +7,16 @@
 4) Rodar migration (npx sequelize-cli db:migrate)
 5) Rodar seed (npx sequelize-cli db:seed:all)
 
-* ----------------------------PENDÊNCIAS -----------------------------------------------------------------------*
 
-1 - Carrinho de Compra
+* --------------------------Questões realizadas no front -----------------------------*
+
+1- Criadas as views do admin
+2 - Criada a view do carrinho, faltando apenas pegar o id para renderizar junto à pagina do cart
+3 - Dashboard desenhado e aguardando definição dos itens que serão renderizados.
+
+
+* ------------------------------PENDÊNCIAS ------------------------------------------*
+1 - Carrinho de Compra - 
 2 - Busca das Informações do Dashboard 
 3 - Tratativa de erros nas páginas (erros de login e erros do banco de dados)
 4 - Newsletter

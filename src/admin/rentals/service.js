@@ -1,8 +1,16 @@
-const { findAll, findPending, activate, findActives, findInactives, desactivate } = require('./database')
+const { findAll, findPending, create, activate, findActives, findInactives, desactivate, findOne } = require('./database')
 
 class Service {
   findAll() {
     return findAll();
+  }
+
+  findOne(userId) {
+    return findOne(userId);
+  }
+
+  create(userId, packId) {
+    return create(userId, packId)
   }
 
   findPending() {
@@ -68,6 +76,8 @@ class Service {
     const fine = days * (Number(packPrice) * 0.1)
     return fine
   }
+
+ 
 }
 
 const RentalService = new Service();

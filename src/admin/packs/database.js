@@ -6,6 +6,10 @@ class Database {
     return Packages.findAll();
   }
 
+  findOne(packId) {
+    return Packages.findByPk(packId);
+  }
+
   create(name, price, period, eletric) {
     const result = Packages.create(
       {

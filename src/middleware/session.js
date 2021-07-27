@@ -3,6 +3,7 @@ const session = require('express-session')
 const startSession = req => (user) => {
 
   req.session.user = {
+    id: user.id,
     name: user.name,
     email: user.email,
     admin: user.admin

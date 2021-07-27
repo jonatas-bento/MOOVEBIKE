@@ -98,3 +98,4 @@ function clicou() {
   clicar = window.alert("Email Cadastrado")
 }
 
+

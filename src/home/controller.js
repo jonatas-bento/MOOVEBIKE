@@ -36,19 +36,18 @@ class HomeController {
   }
 
   static async dashboardPage(req, res) {
-
     if (!req.session.user) {
       res.redirect('login')
     } else {
-
       try {
         const userId = req.session.user.id;
-
         const activeRental = await RentalService.findOne(userId);
-        res.render('dashboard', activeRental);
+        const packId = activeRental.pack_id
+        const pack = await PackService.findOne(packId)
+        res.render('dashboard', { activeRental, pack });
       }
       catch (err) {
-        res.status(500).json({ message: err.message })
+        res.render('message', { message: 'Você não tem plano ativo ou pendente de ativação!' })
       }
     }
   }
@@ -69,9 +68,22 @@ class HomeController {
     res.render('contactUs')
   }
 
+  static async cartPage(req, res) {
+    if (!req.session.user) {
+      res.render('login')
+    } else {
+      const packId = req.params.id;
+      try {
+        const chosenPack = await PackService.findOne(packId);
+        res.render('cart', { chosenPack })
+      } catch (err) {
+        res.status(500).json({ message: err.message });
+      }
+    }
+  }
+
   static async doLogin(req, res) {
     const { email, password } = req.body
-
     try {
       const user = await AuthService.authenticate(email, password)
       if (!user) {
@@ -87,16 +99,13 @@ class HomeController {
 
   static async doResetPassword(req, res) {
     const userEmail = req.body.email
-    console.log(req.body)
     const user = await UsersService.findByEmail(userEmail)
-    console.log(user)
     try {
       if (!user) {
         return res.render('register', { error: 'Faça seu cadastro!' })
       }
       await UsersService.resetPassword(userEmail)
       res.redirect('/login')
-
     } catch (err) {
       console.log(err)
       res.render('register', { error: 'Erro inesperado' })
@@ -120,25 +129,10 @@ class HomeController {
         await UsersService.create(newUser)
 
       req.startSession(newUser)
-
       res.redirect('/')
     } catch (err) {
       console.log(err)
       res.render('register', { error: err.message })
-    }
-  }
-
-  static async cartPage(req, res) {
-    if (!req.session.user) {
-      res.render('login')
-    } else {
-      const packId = req.params.id;
-      try {
-        const chosenPack = await PackService.findOne(packId);
-        res.render('cart', { chosenPack })
-      } catch (err) {
-        res.status(500).json({ message: err.message });
-      }
     }
   }
 
@@ -147,15 +141,12 @@ class HomeController {
     const packId = req.params.id;
     const activePack = await RentalService.findOne(userId);
     if (activePack) {
-      res.render('buyError', { message: 'You have an active rental' })
+      res.render('message', { message: 'You have an active rental' })
     } else {
       await RentalService.create(userId, packId);
-      res.render('buySuccess', { message: 'Package bought successfully!' });
+      res.render('message', { message: 'Package bought successfully!' });
     }
   }
-
 }
 
 module.exports = HomeController
-
-

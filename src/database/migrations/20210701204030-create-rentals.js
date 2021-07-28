@@ -19,13 +19,16 @@ module.exports = {
         references: { model: 'Packages', key: 'id' }
       },
       pick_up: {
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY,
+
       },
       drop_off: {
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY,
+
       },
       actual_drop: {
-        type: Sequelize.DATE
+        type: Sequelize.DATEONLY,
+
       },
       packActive: {
         type: Sequelize.BOOLEAN

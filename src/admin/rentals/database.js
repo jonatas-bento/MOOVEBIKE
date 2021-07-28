@@ -14,6 +14,7 @@ class Database {
     return result;
   }
 
+
   findPending() {
     const query = `SELECT r.id, u.id as user_id, u.name as user_name, u.email, p.id as pack_id, p.name as pack_name, p.price as pack_price, 
     p.period as pack_period, p.electric, r.id as rental_id, r.pick_up, r.drop_off, r.actual_drop, r.packActive 

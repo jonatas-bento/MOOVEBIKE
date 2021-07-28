@@ -1,3 +1,4 @@
+const moment = require('moment');
 const RentalService = require('./service')
 
 class Controller {
@@ -17,7 +18,7 @@ class Controller {
   async listPending(req, res) {
     try {
       const rentals = await RentalService.findPending();
-      res.render('adminRentalsPending', { rentals });
+      res.render('adminRentalsPending', { rentals, moment });
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
@@ -26,7 +27,7 @@ class Controller {
   async listActives(req, res) {
     try {
       const rentals = await RentalService.findActives();
-      res.render('adminRentalsActive', { rentals });
+      res.render('adminRentalsActive', { rentals, moment });
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
@@ -35,7 +36,7 @@ class Controller {
   async listInactives(req, res) {
     try {
       const rentals = await RentalService.findInactives();
-      res.render('adminRentalsInactive', { rentals });
+      res.render('adminRentalsInactive', { rentals, moment });
     } catch (err) {
       res.status(500).json({ message: err.message });
     }

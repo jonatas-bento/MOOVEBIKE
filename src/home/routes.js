@@ -17,19 +17,11 @@ router.get('/contactUs', HomeController.contactUsPage);
 router.post('/login', HomeController.doLogin)
 router.get('/logout', HomeController.doLogout)
 
-//carrinho teste
-
 router.get('/cart/:id', HomeController.cartPage)
-router.post('/cart', HomeController.createRental);
+router.post('/cart/:id', HomeController.createRental);
 
 router.post('/register', validateRegister, HomeController.doRegister);
 
-//teste de deleção de usuários
-router.get('/admin/users/:id', AdminController.deleteUser);
-
 router.post('/resetPassword', HomeController.doResetPassword)
-
-
-
 
 module.exports = router;

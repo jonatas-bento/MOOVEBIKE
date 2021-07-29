@@ -92,10 +92,11 @@ hr {
 
 .btn a {
     text-decoration: none;
+    color: black;
 }
 .third-section .btn{
     background: #ffeb3b;
-    color: black;
+    
     text-decoration: none;
     font-weight: 600;
     font-size: 1rem;

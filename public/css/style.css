@@ -2,51 +2,65 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Roboto', sans-serif;
+  font-family: var(--font1);
+}
+html{
+  background-color: var(--color2);
 }
 
-body,
-html {
+body{
   max-width: 1600px;
   margin: 0 auto;
 }
 
-/*Precisa?*/
+:root {
+  --color1: #F2F2F2;
+  --color2: #D9D9D9;
+  --color3: #4AD6A8;
+  --color4: #FFEB3B;
+  --color5: #FFFFFF;
+  --color6: #000000;
+  --color7: #1F2932;
+  --color8: #888888;
+  --color9: rgba(0, 0, 0, 0.75);
+
+  --font1: 'Roboto', sans-serif;
+
+  --backImg1: url(/img/backgrounds-texture-01-1920x589.jpg);
+  --backImg2: url(/img/background-body-1920x593.jpg);
+}
+
+
 @media (max-width:1600px) {
   html {
     font-size: 100%; /*16px*/
   }
 }
 
-/*De 1200px para baixo*/
 @media (max-width:1200px) {
   html {
     font-size: 93.75%; /*15px*/
   }
 }
 
-/*De 980px para baixo*/
 @media(max-width:980px) {
   html {
     font-size: 87.5%; /*14px*/
   }
 }
 
-/*De 720px para baixo*/
 @media (max-width: 768px) {
   html {
     font-size: 81.25%; /*13px*/
   }
 }
 
-/*De 420px para baixo*/
 @media (max-width: 420px) {
   html {
     font-size: 75%; /*12px*/
   }
 }
 
-/*Precisa?*/
 @media (max-width: 320px) {
   html {
     font-size: 62.5%; /*10px*/

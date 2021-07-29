@@ -16,7 +16,7 @@
 
 
 * ------------------------------PENDÊNCIAS ------------------------------------------*
-1 - Carrinho de Compra - 
+1 - Carrinho de Compra 
 2 - Busca das Informações do Dashboard 
 3 - Tratativa de erros nas páginas (erros de login e erros do banco de dados)
 4 - Newsletter
@@ -36,17 +36,7 @@ Porém nem todos os métodos estão sendo utilizados. Somente removeremos quando
 Para facilitar vou listar onde estão sendo utilizados cada método:
 (Obs: os métodos estão na pasta Controller de cada entidade )
 
-ADMIN > PACKS
 
-- list: utilizado para nas views "home" (seção 3) e "packages"
-- create: NÃO utilizado
-- edit: NÃO utilizado
-- remove: NÃO utilizado
-
-- createRule: NÃO utilizado
-- listRules: utilizado para nas views "home" (seção 3) e "packages"
-- editRule: NÃO utilizado
-- removeRule: NÃO utilizado
 
 ADMIN > RENTALS
 
@@ -61,12 +51,4 @@ Obs: O botão desativar ao ser clicado deve mostrar um modal com o plano que est
 desativado, os dias de atraso e multa. (Linhas 73 e 74 - Admin > Rentals > Controller)
 O atraso e multa não estão sendo armazenados no banco de dados.
 
-ADMIN > USERS
-
-- list: utilizado na view "adminUsers"
-- listOne: NÃO utilizado
-- listByEmail: utilizado para autenticação e reset de senha (Auth, Session)
-- edit: Não utilizado
-- remove: Não utilizado
-- restore: Não utilizado
 

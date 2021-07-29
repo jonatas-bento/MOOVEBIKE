@@ -32,13 +32,15 @@
       </p>
       <h6>Total: R$ <%=chosenPack.price%>
       </h6>
-      <button data-value="300" class="btn btn-primary"> Adicionar</button>
+      <form action="/cart/<%=chosenPack.id%>" method="POST">
+        <button data-value="300" class="btn btn-primary"></a> Adicionar</button>
+      </form>
       <button class="btn btn-danger btn-sm">Remover</button>
     </div>
 
   </div>
 
-  <script src="main.js"></script>
+  <!-- <script src="main.js"></script> -->
 </body>
 
 </html>

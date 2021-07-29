@@ -85,9 +85,12 @@
                                 <%=rental.packActive%>
                             </td>
                             <td>
-                                <button class="btn btn-sm btn-success" tooltip="Ativar">
-                                    <i class="fas fa-power-off"></i>
-                                </button>
+                                <form method="POST"
+                                    action="/admin/rentals/pending/<%=rental.id%>/activate?_method=PATCH">
+                                    <button class="btn btn-sm btn-success" tooltip="Ativar">
+                                        <i class="fas fa-power-off"></i>
+                                    </button>
+                                </form>
                             </td>
                             <% }) %>
                         </tr>
@@ -103,6 +106,7 @@
         integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous">
         </script>
     <script src="/js/scriptplus.js"></script>
+
 </body>
 
 </html>

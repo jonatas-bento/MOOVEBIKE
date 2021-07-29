@@ -75,11 +75,28 @@ class Database {
     return packActive;
   }
 
+
+  async findOnePeriod(rentalId) {
+    const period = await Rentals.findOne({
+      where: {
+        id: rentalId,
+      },
+    });
+    return period;
+  }
+
   async create(userId, packId) {
-    const result = await Rentals.create(userId, packId);
-    return result;
+    const result = await Rentals.create(
+      {
+        user_id: userId,
+        pack_id: packId
+      })
+    return result
   }
 }
+
+
+
 
 const RentalDb = new Database();
 

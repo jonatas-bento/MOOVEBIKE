@@ -1,8 +1,13 @@
 <div onclick="moveBackToTheOldStage()" id="dropdown-menu" class>
     <ul class="dropdown-itens">
         <li><a href="/">Home</a></li>
-        <li><a href="/dashboard">Reservas</a></li>
         <li><a href="/packages">Planos</a></li>
         <li><a href="/stations">Estações</a></li>
+
+        <% if(locals.isLoggedAdmin){ %>
+            <li><a href="/admin">Administrador</a></li>
+            <% } if (locals.isLogged) { %>
+                <li><a href="/dashboard">Reservas</a></li>
+                <% } %>
     </ul>
 </div>

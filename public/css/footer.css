@@ -41,58 +41,61 @@ button[type="submit"]:hover {
 
 /* ---------------FOOTER-------------------------- */
 
-footer {
+footer .infos{
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   width:100%;
   height: auto;
   background-image: url(/img/backgrounds-texture-01-1920x589.jpg);
 }
 
 footer .geral {
-  width: 80%;
- }
-
-footer .info{
-  padding: 0.625rem 5rem;
+ display: flex;
+ justify-content: space-between;
 }
 
-footer .logo{
-  padding: 2.5rem 0rem 0rem 4rem;
+.left {
+  justify-self: flex-start;
+  padding: 0.625rem 4rem;
 }
 
-footer .socialMedia {
-  padding-top: 4rem;
+.left img{
+  height: 45px;
+  width: 180px; 
 }
-
-footer .links{
-  padding-left: 35%;
-  padding-bottom: 1.25rem; 
+.left p{
+  margin-left: 1rem;
+  color: #fff;
+  line-height: 1.5rem;
 }
-
-
-footer h3{
+.right {
+  justify-self: flex-end;
+  padding-top: 2rem;
+  padding-right: 4rem;
+}
+.right h3{
+  margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
   color: rgb(74, 214, 168);
   padding-left: 0rem;
-  }
-
-footer li {
-  list-style: none;
-  color:#fff;
-  line-height: 1.5rem;
- }
+}
+.medias {
+  display: flex;
+  justify-content: space-evenly;
+}
+.links{
+  display: flex;
+  margin: 2rem auto;
+}
 
 .list::after{
   content: "|";
   padding: 0 1rem;
   color: #fff;
 }
-.logo img{
-  height: 45px;
-  width: 180px; 
-}
+
 .links a {
   text-decoration: none;
   color:#fff;
@@ -102,10 +105,7 @@ footer li {
   color:black;
 }
 
-.medias {
-  display: flex;
-  justify-content: space-evenly;
-}
+
 
 /******************Media Queries**********************/
 

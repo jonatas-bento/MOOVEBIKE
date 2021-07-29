@@ -34,18 +34,6 @@ class Service {
     await resetPassword(userEmail, cryptoPassword)
     mailService(userEmail, 'Nova Senha', newPassword)
   }
-
-  edit(userData) {
-    return edit(userData);
-  }
-
-  remove(userId) {
-    return remove(userId);
-  }
-
-  restore(userId) {
-    return restore(userId);
-  }
 }
 
 const UsersService = new Service();

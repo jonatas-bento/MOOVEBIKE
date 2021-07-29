@@ -31,9 +31,9 @@
             <div class="d-flex">
                 <div class="form-inline mr-auto">
                     <div class="form-group mb-2">
+                        <label class="mr-auto">Filtro </label>
                         <input id="search" type="text" class="form-control mr2" placeholder="buscar" />
                     </div>
-                    <label class="mr-auto">Filtro: </label>
                 </div>
             </div>
 
@@ -65,9 +65,13 @@
                             </td>
                             <td>
                                 <div class="btn-group">
-                                    <button class="btn btn-sm btn-danger" tooltip="Excluir">
-                                        <a href="/admin/users/<%-user.id%>"><i class="fa fa-eraser"></i></a>
-                                    </button>
+                                    <form method="POST" action="/admin/users/<%=user.id%>?_method=DELETE">
+                                        <button class="btn btn-sm btn-danger" tooltip="Excluir">
+                                            <a href="/admin/users/<%-user.id%>"></a>
+                                            <i class="fa fa-eraser"></i>
+                                        </button>
+                                    </form>
+
                                 </div>
                             </td>
                             <td>

@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/home.css">
-    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/headerHome.css">
     <link rel="stylesheet" href="/css/footer.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
@@ -20,7 +20,7 @@
     <section class="first-section">
 
         <%- include('partials/header.ejs') %>
-            <%- include('partials/menuheader.ejs') %>
+            <%- include('partials/menuHeader.ejs') %>
 
                 <div class="slider">
                     <figure>
@@ -44,7 +44,6 @@
         </div>
         <br>
         <hr class="division">
-
         <div class="container">
             <% rules.forEach((rule)=> { %>
                 <div class="box">
@@ -61,7 +60,6 @@
         </div>
     </section>
 
-    <!--Third Section-->
     <!--Third Section-->
     <section class="third-section">
         <div class="title">
@@ -87,7 +85,7 @@
                             </span><br>
                             <span class="aviso">*Checar planos para Moove Elétrica</span>
                         </div>
-                        <a href="/cart"></a><button class="btn">Comprar Agora!</button></a>
+                        <button class="btn"><a href="/packages">Comprar Agora!</a></button>
                     </div>
                     <% }}) %>
         </div>
@@ -95,13 +93,11 @@
 
     <!--Fourth Section-->
     <section class="fourth-section">
-
         <div class="title">
             <h2><span>Nossas MOOVE's</span></h2>
         </div>
         <br>
         <hr class="division">
-
         <div class="container">
             <% bikes.forEach((bike)=> { %>
                 <div class="box">

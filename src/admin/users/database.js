@@ -27,23 +27,7 @@ class Database {
     const result = await Users.update({ password: cryptoPassword }, { where: { email: userEmail } })
     return result
   }
-
-  async edit(userData) {
-    const user = await Users.findByPk(userData.id);
-    Object.assign(user, userData);
-    user.save();
-    return user;
-  }
-
-  remove(id) {
-    return Users.destroy({ where: { id } });
-  }
-
-  restore(id) {
-    return Users.restore({ where: { id } });
-  }
 }
 
 const UsersDb = new Database();
-
 module.exports = UsersDb;

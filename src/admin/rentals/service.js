@@ -9,6 +9,10 @@ class Service {
     return findOne(userId);
   }
 
+  findOnePeriod(rentalId) {
+    return findOnePeriod(rentalId)
+  }
+
   create(userId, packId) {
     return create(userId, packId)
   }
@@ -76,10 +80,7 @@ class Service {
     const fine = days * (Number(packPrice) * 0.1)
     return fine
   }
-
-
 }
 
 const RentalService = new Service();
-
 module.exports = RentalService;

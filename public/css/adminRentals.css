@@ -1,22 +1,19 @@
 body {
-  background: url(/img/background-body-1920x593.jpg)
+  background: url(/img/backgrounds-texture-01-1920x589.jpg);
+  color: white;
+  display: flex;
+  min-height: 100vh;
 }
 
-header a {
-  background-color: rgb(74, 214, 168);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 51px;
-  display: flex;
-  height: 51px;
+*{
+  font-family: 'Uchen', serif;
 }
-header img {
-  margin-left:55px;
+
+.container{
+  margin-top: 50px;
 }
-h2 {
-  margin-top: 60px;
+main h2 {
+  margin-top: 130px;
   text-align: center;
   
 }

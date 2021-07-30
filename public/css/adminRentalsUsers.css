@@ -1,12 +1,10 @@
-*{
-  font-family: var(--font2);
-}
-
 body {
   background: var(--backImg2);
   color: var(--color5);
   height: 100vh;
   margin: 0 auto;
+  
+  
 }
 
 div .container{
@@ -29,3 +27,14 @@ td{
 width: 10%;
 text-align: center;
 }
+
+label {
+  font-weight: bold;
+   /* Other styling... 
+   text-align: right;
+   clear: both;
+   float:left;
+   margin-right:15px;*/
+}
+
+

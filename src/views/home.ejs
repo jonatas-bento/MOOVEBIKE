@@ -85,7 +85,7 @@
                             </span><br>
                             <span class="aviso">*Checar planos para Moove Elétrica</span>
                         </div>
-                        <button class="btn"><a href="/packages">Comprar Agora!</a></button>
+                        <button class="btn"><a href="/packages">Ver Plano!</a></button>
                     </div>
                     <% }}) %>
         </div>
@@ -102,11 +102,11 @@
             <% bikes.forEach((bike)=> { %>
                 <div class="box">
                     <div class="text-products">
-                        <a href="#">
+                        <p>
                             <%=bike.name%>
-                        </a>
+                        </p>
                     </div>
-                    <a href="#"><img src="<%=bike.photo%>"></a>
+                    <img src="<%=bike.photo%>">
                 </div>
                 <% }) %>
         </div>

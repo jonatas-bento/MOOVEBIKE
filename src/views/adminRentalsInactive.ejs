@@ -28,8 +28,8 @@
             <div class="d-flex">
                 <div class="form-inline mr-auto">
                     <div class="form-group mb-2">
-                        <label class="mr-auto">Filtro</label>
-                        <input id="search" type="text" class="form-control mr2" placeholder="buscar" />
+                        <label class="mr-auto"></label>
+                        <input id="search" type="text" class="form-control mr2" placeholder="Usuario" />
                     </div>
                 </div>
             </div>
@@ -39,14 +39,12 @@
                     <tr>
                         <th>ID</th>
                         <th>Usuário</th>
+                        <th>E-mail</th>
                         <th>Pacote</th>
-                        <th>Preço</th>
                         <th>Período</th>
-                        <th>Bike Elétrica</th>
                         <th>Retirada</th>
                         <th>Devolução</th>
                         <th>Atual Devolução</th>
-                        <th>Pacote Ativo</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -59,16 +57,13 @@
                                 <%=rental.user_name%>
                             </td>
                             <td>
+                                <%=rental.user_name%>
+                            </td>
+                            <td>
                                 <%=rental.pack_name%>
                             </td>
                             <td>
-                                <%=rental.pack_price%>
-                            </td>
-                            <td>
                                 <%=rental.pack_period%>
-                            </td>
-                            <td>
-                                <%=rental.electric%>
                             </td>
                             <td>
                                 <%=rental.pick_up%>
@@ -78,9 +73,6 @@
                             </td>
                             <td>
                                 <%=rental.actual_drop%>
-                            </td>
-                            <td>
-                                <%=rental.packActive%>
                             </td>
                             <% }) %>
                         </tr>

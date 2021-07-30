@@ -23,13 +23,16 @@
         <a href="/admin"><img src="/img/Logo_MoovebikeA_modV3.png" alt="logo"></a>
     </header>
     <main>
+        
         <h2 class="container">USUÁRIOS</h2>
+        
+
         <div class="container">
             <div class="d-flex">
                 <div class="form-inline mr-auto">
                     <div class="form-group mb-2">
                         <label class="mr-auto">Filtro </label>
-                        <input id="search" type="text" class="form-control mr2" placeholder="buscar" />
+                        <input id="search" type="text" class="form-control mr2" placeholder="Search" />
                     </div>
                 </div>
             </div>
@@ -41,7 +44,6 @@
                         <th>Nome</th>
                         <th>Email</th>
                         <th>Administrador</th>
-                        <th>VER PLANOS</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -58,15 +60,6 @@
                             </td>
                             <td>
                                 <%=user.admin%>
-                            </td>
-                            <td>
-                                <div class="btn-group">
-                                    <button class="btn btn-sm btn-warning" tooltip="Editar">
-                                        <a href="/admin/users/<%-user.id%>"></a>
-                                        <i class="fa fa-biking"></i>
-                                    </button>
-
-                                </div>
                             </td>
                         </tr>
                         <% }) %>

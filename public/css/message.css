@@ -1,46 +1,22 @@
 body {
-  background: url(/img/backgrounds-texture-01-1920x589.jpg);
-  color: white;
-  display: flex;
+  background: var(--backImg1);
+  min-width: 100vw;
   min-height: 100vh;
- 
 }
 
-header a {
-  background-color: rgb(74, 214, 168);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 51px;
-  display: flex;
-  height: 51px;
-}
-header img {
-  margin-left:55px;
-}
-
-main {
-  width: 400px;
-  padding: 10px;
-  margin: auto;
-}
-h3 {
-  font-size: 40px;
-  color: rgb(74, 214, 168);
+h1 {
+  color: var(--color3);
   padding: 1px;
-  font-family: 'Roboto', sans-serif;
   font-weight: bold;
-  text-align: center;
   padding-bottom: 30px;
-  margin: 1rem;
-  margin-top: 200px;
+  margin: 3rem;
+  padding-top: 150px;
 }
 
-h3:after {
+h1:after {
   content: ' ';
   display: block;
-  width: 100%;
+  width: 25%;
   height: 2px;
   margin-top: 10px;
   background: -webkit-linear-gradient( left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);

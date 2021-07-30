@@ -1,11 +1,11 @@
 header a {
   background-color: var(--color3);
   position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 51px;
   display: flex;
+  max-width: 1600px;
+  margin: 0 auto;
 }
 
 header img {

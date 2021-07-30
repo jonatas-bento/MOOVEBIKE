@@ -1,5 +1,5 @@
 const RentalService = require('./service');
-
+const PackService = require('../packs/service');
 
 class Controller {
 
@@ -45,10 +45,9 @@ class Controller {
   async activate(req, res) {
     const today = new Date();
     const rentalId = req.params.id;
-    // const period = req.body.rental_id;
-    const period = await RentalService.findOnePeriod(rentalId);
-
-    console.log(period)
+    const packId = await RentalService.findOnePackId(rentalId);
+    const packPeriod = await PackService.findOne(packId)
+    const period = packPeriod.period
     const rentalData = {
       rental_id: rentalId,
       pick_up: today,
@@ -56,11 +55,9 @@ class Controller {
       packActive: true
     }
     console.log(rentalData)
-
-
     try {
       await RentalService.activate(rentalData)
-      res.render('message', { message: "Rental activated successfully" });
+      res.render("message", { message: 'Pacote ativado com sucesso' })
     } catch (err) {
       res.status(400).json({ message: err.message });
     }
@@ -68,21 +65,23 @@ class Controller {
 
   async desactivate(req, res) {
     const today = new Date();
-    const packPrice = req.body.pack_price;
-    console.log(packPrice)
-
+    const rentalId = req.params.id;
+    const drop = await RentalService.findOneDropOff(rentalId);
+    const packId = await RentalService.findOnePackId(rentalId);
+    const packPrice = await PackService.findOne(packId);
+    const price = packPrice.price;
     const rentalData = {
-      rental_id: req.body.rental_id,
-      drop_off: req.body.drop_off,
+      rental_id: rentalId,
+      drop_off: drop,
       actual_drop: today,
       packActive: false
     }
-
     const delayDays = RentalService.getDelayDays(rentalData.drop_off, today);
-    const fine = RentalService.getFine(delayDays, packPrice);
+    const fine = RentalService.getFine(delayDays, price);
+    console.log(fine)
     try {
       await RentalService.desactivate(rentalData)
-      res.status(201).json({ message: "Rental desactivated successfully" });
+      res.render("message", { message: `Pacote desativado com sucesso! Dias de atraso: ${delayDays} | Multa: R$${fine}` })
     } catch (err) {
       res.status(400).json({ message: err.message });
     }
@@ -90,5 +89,4 @@ class Controller {
 }
 
 const RentalController = new Controller();
-
 module.exports = RentalController;

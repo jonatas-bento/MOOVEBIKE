@@ -23,8 +23,10 @@ body{
   --color7: #1F2932;
   --color8: #888888;
   --color9: rgba(0, 0, 0, 0.75);
+  --color10:#E61919;
 
   --font1: 'Roboto', sans-serif;
+  --font2: 'Uchen', serif;
 
   --backImg1: url(/img/backgrounds-texture-01-1920x589.jpg);
   --backImg2: url(/img/background-body-1920x593.jpg);

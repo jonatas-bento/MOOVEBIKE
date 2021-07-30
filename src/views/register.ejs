@@ -5,9 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastro</title>
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/register.css">
+    <title>Cadastro</title>
 </head>
 
 <body>
@@ -17,7 +18,7 @@
     <main>
 
         <div class="cadastro">
-            <h1><span>Cadastre-se</span></h1>
+            <h1>Cadastre-se</h1>
         </div>
 
         <form action="/register" method="POST">
@@ -28,22 +29,13 @@
                 </div>
                 <% } %>
 
-                    <label for="name">
-                        <span>Nome Completo</span>
-                        <input type="text" id="name" name="name" required="required">
-                    </label>
-
-                    <label for="email">
-                        <span>Email</span>
-                        <input type="text" id="email" name="email" required="required">
-                    </label>
-
-                    <label for="password">
-                        <span>Senha</span>
-                        <input type="password" id="password" name="password" required="required">
-                    </label>
+                    <label for="name">Nome Completo</label>
+                    <input type="text" id="name" name="name" required="required">
+                    <label for="email">Email</label>
+                    <input type="text" id="email" name="email" required="required">
+                    <label for="password">Senha</label>
+                    <input type="password" id="password" name="password" required="required">
                     <button type="submit">Inscreva-se</button>
-
         </form>
     </main>
 </body>

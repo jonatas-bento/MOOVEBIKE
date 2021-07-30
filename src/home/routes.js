@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 const HomeController = require('./controller');
-const AdminController = require('../admin/controller')
 const { validateRegister } = require('../middleware/registerValidation');
 
 /* Home Pages */

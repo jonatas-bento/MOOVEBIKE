@@ -14,7 +14,6 @@ class Database {
     return result;
   }
 
-
   findPending() {
     const query = `SELECT r.id, u.id as user_id, u.name as user_name, u.email, p.id as pack_id, p.name as pack_name, p.price as pack_price, 
     p.period as pack_period, p.electric, r.id as rental_id, r.pick_up, r.drop_off, r.actual_drop, r.packActive 
@@ -75,14 +74,22 @@ class Database {
     return packActive;
   }
 
-
-  async findOnePeriod(rentalId) {
-    const period = await Rentals.findOne({
+  async findOnePackId(rentalId) {
+    const pack = await Rentals.findOne({
       where: {
         id: rentalId,
       },
     });
-    return period;
+    return pack.pack_id;
+  }
+
+  async findOneDropOff(rentalId) {
+    const drop = await Rentals.findOne({
+      where: {
+        id: rentalId,
+      },
+    });
+    return drop.drop_off;
   }
 
   async create(userId, packId) {
@@ -95,9 +102,5 @@ class Database {
   }
 }
 
-
-
-
 const RentalDb = new Database();
-
 module.exports = RentalDb;

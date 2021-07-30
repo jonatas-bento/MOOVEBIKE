@@ -14,7 +14,7 @@ router.get('/rentals/pending', RentalController.listPending);
 router.get('/rentals/active', RentalController.listActives);
 router.get('/rentals/inactive', RentalController.listInactives);
 router.patch('/rentals/pending/:id/activate', RentalController.activate);
-router.put('/rentals/active/desactivate', RentalController.desactivate);
+router.patch('/rentals/active/:id/desactivate', RentalController.desactivate);
 
 //ROTA PARA TABELA PACKAGES
 router.get('/packs', PackController.list);

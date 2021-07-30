@@ -141,10 +141,10 @@ class HomeController {
     const packId = req.params.id;
     const activePack = await RentalService.findOne(userId);
     if (activePack) {
-      res.render('message', { message: 'You have an active rental' })
+      res.render('message', { message: 'Você tem um plano ativo!' })
     } else {
       await RentalService.create(userId, packId);
-      res.render('message', { message: 'Package bought successfully!' });
+      res.render('message', { message: 'Pacote comprado com sucesso!' });
     }
   }
 }

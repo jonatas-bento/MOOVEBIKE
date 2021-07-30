@@ -2,7 +2,8 @@ body {
   background: var(--backImg1);
   color: var(--color5);
   display: flex;
-  min-height: 100vh;
+  height: 100vh;
+  margin: 0 auto;
 }
 
 main {

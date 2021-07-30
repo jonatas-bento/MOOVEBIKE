@@ -1,22 +1,9 @@
 body {
-    background: url(/img/backgrounds-texture-01-1920x589.jpg);
-    color: white;
+    background: var(--backImg1);
+    color: var(--color5);
     font-weight: 500;
     display: flex;
     min-height: 100vh;
-}
-header a {
-    background-color: rgb(74, 214, 168);
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 51px;
-    display: flex;
-    height: 51px;
-}
-header img {
-    margin-left:55px;
 }
 main {
     width: 50vw;
@@ -29,15 +16,16 @@ main {
     margin: auto;
 }
 form {
-    font-family: 'Roboto';
     max-width: 500px;
 }
+
 h1 {
-    color: rgb(74, 214, 168);
+    color: var(--color3);
     font-size: 3rem;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
     text-align: center;
 }
+
 h1:after {
     content: ' ';
     display: block;
@@ -46,28 +34,42 @@ h1:after {
     margin-top: 10px;
     background: -webkit-linear-gradient( left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
 }
+label{
+    color: var(--color3);
+}
+
 input {
     width: 95%;
+    margin-top: 5px;
     margin-bottom: 25px;
     padding: 10px;
-    border: 1px solid #b2b2b2;
+    border: 1px solid var(--color2);
 }
+
 textarea {
     width: 365px;
     height:150px;
     line-height: 20px;
+    padding: 10px;
     max-width: 400px;
+    margin-top: 5px;
     margin-bottom: 10px;
 }
-.enviar {
-    background-color: rgb(74, 214, 168);
+button[type="submit"] { 
+    background-color: var(--color3);
     height: 40px;
     width: 100px;
     font-weight: bold;
-    border: 1px solid #fff;
-    color: white
+    border: 1px solid var(--color3);
+    color: var(--color6);
+    cursor: pointer;
+    padding: 8px 5px;
+    font-size: 18px; 
+    border-radius: 3px;  
 }
+
 button[type="submit"]:hover {
-    background: rgb(84, 250, 195);
+    background: var(--color3);
     transition: all .3s ease-in-out;
 }
+

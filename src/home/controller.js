@@ -44,10 +44,11 @@ class HomeController {
         const activeRental = await RentalService.findOne(userId);
         const packId = activeRental.pack_id
         const pack = await PackService.findOne(packId)
+        
         res.render('dashboard', { activeRental, pack });
       }
-      catch (err) {
-        res.render('message', { message: 'Você não tem plano ativo ou pendente de ativação!' })
+      catch (err) {   
+           res.render('message', { message: 'Você não tem plano ativo ou pendente de ativação!' }) 
       }
     }
   }
@@ -92,8 +93,7 @@ class HomeController {
       req.startSession(user)
       res.redirect('/')
     } catch (err) {
-      console.log(err)
-      res.render('login', { error: 'Erro inesperado' })
+      res.status(500).json({ message: err.message });
     }
   }
 
@@ -107,8 +107,7 @@ class HomeController {
       await UsersService.resetPassword(userEmail)
       res.redirect('/login')
     } catch (err) {
-      console.log(err)
-      res.render('register', { error: 'Erro inesperado' })
+      res.status(500).json({ message: err.message });
     }
   }
 
@@ -131,20 +130,24 @@ class HomeController {
       req.startSession(newUser)
       res.redirect('/')
     } catch (err) {
-      console.log(err)
-      res.render('register', { error: err.message })
+      res.status(500).json({ message: err.message });
     }
   }
 
   static async createRental(req, res) {
     const userId = req.session.user.id;
     const packId = req.params.id;
-    const activePack = await RentalService.findOne(userId);
-    if (activePack) {
-      res.render('message', { message: 'Você tem um plano ativo!' })
+    
+    try{
+      const activePack = await RentalService.findOne(userId);
+      if (activePack) {
+        res.render('message', { message: 'Você tem um plano ativo!' })
     } else {
       await RentalService.create(userId, packId);
       res.render('message', { message: 'Pacote comprado com sucesso!' });
+    }
+    } catch(err) {
+      res.status(500).json({ message: err.message });
     }
   }
 }

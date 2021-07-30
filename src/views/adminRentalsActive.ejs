@@ -20,10 +20,11 @@
 
 <body>
   <header>
-    <a href="/admin"><img src="/img/Logo_MoovebikeA_modV3.png" alt="logo"></a>
+    <a href="/"><img src="/img/Logo_MoovebikeA_modV3.png" alt="logo"></a>
   </header>
 
   <main>
+    <div class="link container"><a href="/admin">Voltar</a></div>
     <h2 class="container">PACOTES ATIVOS</h2>
     <div class="container">
       <div class="d-flex">
@@ -40,14 +41,13 @@
           <tr>
             <th>ID</th>
             <th>Usuário</th>
+            <th>E-mail</th>
             <th>Pacote</th>
             <th>Preço</th>
             <th>Período</th>
             <th>Bike Elétrica</th>
             <th>Retirada</th>
             <th>Devolução</th>
-            <th>Atual Devolução</th>
-            <th>Pacote Ativo</th>
             <th>Desativar</th>
           </tr>
         </thead>
@@ -59,6 +59,9 @@
               </td>
               <td>
                 <%=rental.user_name%>
+              </td>
+              <td>
+                <%=rental.email%>
               </td>
               <td>
                 <%=rental.pack_name%>
@@ -77,12 +80,6 @@
               </td>
               <td>
                 <%=rental.drop_off%>
-              </td>
-              <td>
-                <%=rental.actual_drop%>
-              </td>
-              <td>
-                <%=rental.packActive%>
               </td>
               <td>
                 <form method="POST" action="/admin/rentals/active/<%=rental.id%>/desactivate?_method=PATCH">

@@ -53,6 +53,8 @@ footer .infos{
 footer .geral {
  display: flex;
  justify-content: space-between;
+ margin: 10px;
+ 
 }
 
 .left {
@@ -115,43 +117,12 @@ footer .geral {
    margin-left: 1rem;
    width: 400px;
   }
-  
-footer .links{
-  padding-left: 30%;
-}
 }
 
 @media (max-width:600px) {
-  .news {
-    flex-wrap: wrap; 
+  .left, .right {
+    display: none;
   }
-  .news span {
-    padding-bottom: 1rem;
-  }
-  footer .geral {
-    width: 75%;
-   }
-  footer .links{
-  padding-left: 27%;
-  }
-}
+} 
 
-@media (max-width:420px) {
-  .news button{
-    margin-top:1rem;
-  }
-
-  footer .info{
-    padding: 0.625rem 2rem;
-  }
-
-  footer .logo{
-    padding: 2.5rem 0rem 0rem 1rem;
-  }
-  
-  footer .links{
-    padding-left: 18%;
-  }
-    
-}
   

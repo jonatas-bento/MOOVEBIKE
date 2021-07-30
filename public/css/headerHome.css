@@ -135,10 +135,13 @@ header .btn-login:hover,
   .navegador li,
   .btn-cadastro,
   .btn-user,
-  .btn-admin
+  .btn-admin,
+  .btn-login,
+  .btn-logout
    {
     display: none;
   }
+  
   
  
   .hamburguer {

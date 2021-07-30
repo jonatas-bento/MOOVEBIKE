@@ -23,7 +23,7 @@
         <a href="/admin"><img src="/img/Logo_MoovebikeA_modV3.png" alt=""></a>
     </header>
     <main>
-
+        <div class="link container"><a href="/admin">Voltar</a></div>
         <h2 class="container">PACOTES PENDENTES</h2>
         <div class="container">
             <div class="d-flex">
@@ -41,6 +41,7 @@
                     <tr>
                         <th>ID</th>
                         <th>Usuário</th>
+                        <th>E-mail</th>
                         <th>Pacote</th>
                         <th>Preço</th>
                         <th>Período</th>
@@ -57,6 +58,9 @@
                             </td>
                             <td>
                                 <%=rental.user_name%>
+                            </td>
+                            <td>
+                                <%= rental.email%>
                             </td>
                             <td>
                                 <%=rental.pack_name%>

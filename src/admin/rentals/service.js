@@ -1,4 +1,4 @@
-const { findAll, findPending, create, activate, findActives, findOnePackId, findOneDropOff, findInactives, desactivate, findOne } = require('./database')
+const { findAll, findPending, create, activate, findActives, findOnePackId, findOneDropOff, findInactives, desactivate, findOne, findPendingById, findActivesById } = require('./database')
 
 class Service {
   findAll() {
@@ -9,23 +9,21 @@ class Service {
     return findOne(userId);
   }
 
-  findOnePackId(rentalId) {
-    return findOnePackId(rentalId)
-  }
-
-  findOneDropOff(rentalId) {
-    return findOneDropOff(rentalId)
-  }
-
   create(userId, packId) {
     return create(userId, packId)
   }
 
-  findPending() {
+  findPending(rentalId) {
+    if (rentalId) {
+      return findPendingById(rentalId)
+    }
     return findPending();
   }
 
-  findActives() {
+  findActives(rentalId) {
+    if (rentalId) {
+      return findActivesById(rentalId);
+    }
     return findActives();
   }
 

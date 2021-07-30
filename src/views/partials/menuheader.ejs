@@ -4,10 +4,14 @@
         <li><a href="/packages">Planos</a></li>
         <li><a href="/stations">Estações</a></li>
 
+
         <% if(locals.isLoggedAdmin){ %>
             <li><a href="/admin">Administrador</a></li>
             <% } if (locals.isLogged) { %>
                 <li><a href="/dashboard">Reservas</a></li>
                 <% } %>
+
+                <li><a href="/login">Login</a></li>
+                <li><a href="/logout">Sair</a></li>
     </ul>
 </div>

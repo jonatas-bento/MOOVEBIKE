@@ -4,7 +4,6 @@ body {
   height: 100vh;
   margin: 0 auto;
   
-  
 }
 
 div .container{
@@ -23,18 +22,18 @@ table {
 thead {
   font-weight: bold;
 }
-td{
+thead, td{
 width: 10%;
-text-align: center;
+text-align: left;
 }
 
 label {
   font-weight: bold;
-   /* Other styling... 
-   text-align: right;
-   clear: both;
-   float:left;
-   margin-right:15px;*/
 }
 
+.link {
+  position: relative;
+  top: 60px;
+  left: 10px;
+}
 

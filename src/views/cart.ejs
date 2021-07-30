@@ -28,7 +28,6 @@
 
   <div class="carrinho">
     <div class="card-text">
-
       <h2 class="card-title">Resumo do Pedido</h2>
       <p>
         Pacote: <%=chosenPack.name%>
@@ -40,13 +39,11 @@
       </h5>
       <div class="btns">
         <form action="/cart/<%=chosenPack.id%>" method="POST">
-          <button data-value="300" class="btn btn-primary"></a> ADICIONAR</button>
+          <button data-value="300" class="btn btn-primary">
+            Finalizar Compra</button>
         </form>
-        <button class="btn btn-danger btn-sm">REMOVER</button>
       </div>
     </div>
   </div>
-
 </body>
-
 </html>

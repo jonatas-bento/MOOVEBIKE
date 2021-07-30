@@ -9,7 +9,7 @@ html{
 }
 
 body{
-  max-width: 1600px;
+  max-width: 1320px;
   margin: 0 auto;
 }
 
@@ -24,6 +24,9 @@ body{
   --color8: #888888;
   --color9: rgba(0, 0, 0, 0.75);
   --color10:#E61919;
+  --color11:rgba(74, 214, 168, 0);
+  --color12:#98EACE;
+  --color13:#6B727C;
 
   --font1: 'Roboto', sans-serif;
   --font2: 'Uchen', serif;

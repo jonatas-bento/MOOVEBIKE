@@ -3,7 +3,7 @@ body {
   min-height: 100vh;
   display: flex;
 }
-h1 {
+h3 {
   color: var(--color3);
   padding: 1px;
   font-weight: bold;
@@ -11,7 +11,7 @@ h1 {
   margin: 3rem;
   padding-top: 150px;
 }
-h1:after {
+h3:after {
   content: ' ';
   display: block;
   width: 100%;

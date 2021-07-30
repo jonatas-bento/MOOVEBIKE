@@ -1,58 +1,72 @@
-*{
-  font-family: var(--font2);
-}
-
 body {
-  background: var(--backImg1);
+  background: var(--backImg2);
   color: var(--color5);
   min-width: 100vw;
   height: 100vh;
 }
-
-div .container{
-  margin-top: 3.125rem;
+main {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
-.card-img-top {
-  width: 50px;
-  margin-bottom:1.25rem;
-}
-
 h1 {
-  font-size: 40px;
   color: var(--color3);
-  padding: 1px;
-  font-weight: bold;
+  font-size: 3rem;
+  margin-bottom: 30px;
+  margin-top: 100px;
   text-align: center;
-  padding-bottom: 2rem;
-  padding-top: 7rem;
-  margin: 1rem;
 }
-
 h1:after {
   content: ' ';
   display: block;
   width: 100%;
   height: 2px;
-  margin-top: 0.625rem;
+  margin-top: 10px;
   background: -webkit-linear-gradient( left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
 }
-
-.row,
-.carrinho {
+.cart img{
+  width: 70px; 
+}
+.resumo {
+  background: var(--backImg1);
+  padding: 20px;
+  width: 400px;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+.resumo h2 {
+  text-align: center;
+  padding: 15px;
+}
+.resumo p{
+  padding: 5px;
+}
+.resumo h4 {
+  color: var(--color4);
+  padding: 5px;
+}
+form {
   display: flex;
   justify-content: center;
 }
 
-p {
-  font-size: 1.3rem;
-  line-height: 1.5rem;
+button{ 
+  background-color: var(--color3);
+  width: 80%;
+  font-weight: bold;
+  border: 1px solid var(--color3);
+  color: var(--color6);
+  cursor: pointer;
+  padding: 8px 5px;
+  font-size: 18px; 
+  border-radius: 3px; 
+  margin: 20px;
 }
 
-.btns {
-  display: flex;
-}
-
-button {
-  margin-right: 1.3rem;
-  margin-top: 2rem;
+button:hover {
+  background: var(--color4);
+  transition: all .3s ease-in-out;
 }

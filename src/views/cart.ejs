@@ -1,11 +1,8 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
   <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
     integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
   <link rel="stylesheet" href="/css/style.css">
@@ -13,37 +10,27 @@
   <link rel="stylesheet" href="/css/cart.css">
   <title>Carrinho</title>
 </head>
-
 <body>
   <header>
     <a href="/"><img src="/img/Logo_MoovebikeA_modV3.png" alt="logo"></a>
   </header>
-
-  <div class="container">
+  <main>
     <h1>Carrinho MooveBike</h1>
-    <div class="row">
-      <img class="card-img-top" src="/img/shopping-icon.png" alt="carrinho-compra" />
+    <div class="cart">
+      <img src="/img/shopping-icon.png" alt="carrinho-compra" />
     </div>
-  </div>
-
-  <div class="carrinho">
-    <div class="card-text">
-      <h2 class="card-title">Resumo do Pedido</h2>
+    <div class="resumo">
+      <h2>Resumo do Pedido</h2>
       <p>
         Pacote: <%=chosenPack.name%>
       </p>
       <p>
         Período: <%=chosenPack.period%>
       </p>
-      <h5>Total: R$ <%=chosenPack.price%>
-      </h5>
-      <div class="btns">
-        <form action="/cart/<%=chosenPack.id%>" method="POST">
-          <button data-value="300" class="btn btn-primary">
-            Finalizar Compra</button>
-        </form>
-      </div>
+      <h4>Total: R$ <%=chosenPack.price%></h4>
+      <form action="/cart/<%=chosenPack.id%>" method="POST">
+        <button>Finalizar Compra</button>
+      </form>
     </div>
-  </div>
 </body>
 </html>

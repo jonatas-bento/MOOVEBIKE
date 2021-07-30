@@ -99,24 +99,6 @@ class Database {
     return packActive;
   }
 
-  async findOnePackId(rentalId) {
-    const pack = await Rentals.findOne({
-      where: {
-        id: rentalId,
-      },
-    });
-    return pack.pack_id;
-  }
-
-  async findOneDropOff(rentalId) {
-    const drop = await Rentals.findOne({
-      where: {
-        id: rentalId,
-      },
-    });
-    return drop.drop_off;
-  }
-
   async create(userId, packId) {
     const result = await Rentals.create(
       {

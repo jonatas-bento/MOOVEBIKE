@@ -6,7 +6,7 @@ class Controller {
   async list(req, res) {
     try {
       const rentals = await RentalService.findAll();
-        res.status(200).json(rentals);
+      res.status(200).json(rentals);
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
@@ -43,8 +43,8 @@ class Controller {
     const today = new Date();
     const rentalId = req.params.id;
     const rental = await RentalService.findPending(rentalId);
+    const period = rental[0].pack_period;
 
-    const period = rental.period
     const rentalData = {
       rental_id: rentalId,
       pick_up: today,
@@ -62,8 +62,8 @@ class Controller {
   async desactivate(req, res) {
     const today = new Date();
     const rentalId = req.params.id;
-    const rental = await RentalService.findActives(rentalId); 
-  
+    const rental = await RentalService.findActives(rentalId);
+
     const rentalData = {
       rental_id: rentalId,
       drop_off: rental.drop_off,

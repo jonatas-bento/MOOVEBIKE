@@ -18,18 +18,23 @@
     <title>Planos Inativos</title>
 </head>
 
-<body>
-    <header>
-        <a href="/"><img src="/img/Logo_MoovebikeA_modV3.png" alt=""></a>
+<body class="container">
+    
+    <header class="d-flex justify-content-center">
+        <a class="container" href="/"><img src="/img/Logo_MoovebikeA_modV3.png" alt=""></a>
     </header>
     <main>
-        <div class="link container"><a href="/admin">Voltar</a></div>
+        
         <h2 class="container">PACOTES INATIVOS</h2>
         <div class="container">
-            <div class="d-flex">
+            <div class="d-flex flex-direction-row">
                 <div class="form-inline mr-auto">
+                    <div>
+                        <button class="btn btn-warning mb-4">
+                            <a style="text-decoration:none; color: black;" href="/admin">Voltar</a>
+                        </button>
+                    </div>
                     <div class="form-group mb-2">
-                        <label class="mr-auto"></label>
                         <input id="search" type="text" class="form-control mr2" placeholder="Usuario" />
                     </div>
                 </div>

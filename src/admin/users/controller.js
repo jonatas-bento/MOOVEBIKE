@@ -3,9 +3,10 @@ const UsersService = require('./service');
 class Controller {
 
   async list(req, res) {
+    const { page = 1 } = req.query
     try {
-      const users = await UsersService.findAll()
-      res.render('adminUsers', { users })
+      const {users, pageTotal} = await UsersService.findAndCountAll(page)
+      res.render('adminUsers', { users, pageTotal })
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
@@ -14,7 +15,8 @@ class Controller {
   async listOne(req, res) {
     try {
       const { userId } = req.params
-      const userOne = await UsersService.findOne(userId)
+      const user = await UsersService.findOne(userId);
+      return user
     }
     catch (err) {
       res.status(500).json({ message: err.message });

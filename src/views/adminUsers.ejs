@@ -69,6 +69,17 @@
                         </tr>
                         <% }) %>
         </div>
+
+        <nav aria-label="...">
+            <ul class="pagination pagination-sm">
+                <% for (let pageNumber= 1; pageNumber <= pageTotal; pageNumber++) { %>
+                    <li class="page-item">
+                        <a class="page-link" href="?page=<%=pageNumber%>">
+                            <%=pageNumber%>
+                        </a>
+                    </li>
+                <% } %>
+          </nav>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

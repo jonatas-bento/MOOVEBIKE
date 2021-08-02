@@ -1,4 +1,4 @@
-const { findAll, findPending, create, activate, findActives, findOnePackId, findOneDropOff, findInactives, desactivate, findOne, findPendingById, findActivesById } = require('./database')
+const { findAll, findPending, create, activate, findActives, findInactives, desactivate, findOne, findPendingById, findActivesById } = require('./database');
 
 class Service {
   findAll() {
@@ -64,10 +64,12 @@ class Service {
   }
 
   getDelayDays(drop_off, today) {
+ 
 
     const now = new Date(today); // Data de hoje (actual_drop)
-    const past = new Date(drop_off); // Data no passado (drop_off) 
+    const past = new Date(drop_off); // Data no passado (drop_off)
     const diff = now.getTime() - past.getTime(); // Subtrai uma data pela outra
+
     let days = Math.ceil(diff / (1000 * 60 * 60 * 24)); // Divide o total pelo total de milisegundos correspondentes a 1 dia.
 
     // Se days for negativo, o cliente entregou antes do prazo
@@ -78,9 +80,8 @@ class Service {
   }
 
   getFine(days, packPrice) {
-    // A multa por dia será 10% do valor do plano contratado
-    const fine = days * (Number(packPrice) * 0.1)
-    return fine
+
+    return days < 0 ? 0 : days * (Number(packPrice) * 0.1)
   }
 }
 

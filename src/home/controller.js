@@ -24,7 +24,6 @@ class HomeController {
     try {
       const packages = await PackService.findAll();
       const packRules = await PackService.findAllRules();
-      console.log(packRules)
       res.render('packages', { packages, packRules });
     } catch (err) {
       res.status(500).json({ message: err.message });

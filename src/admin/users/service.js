@@ -1,12 +1,12 @@
-const { findAll, findOne, findByEmail, create, resetPassword, edit, remove, restore } = require('./database');
+const { findAndCountAll, findOne, findByEmail, create, resetPassword, edit, remove, restore } = require('./database');
 const { hash } = require('../../libs/crypto')
 const mailService = require('../../libs/mail')
 const utils = require('../../libs/util')
 
 class Service {
 
-  findAll() {
-    return findAll();
+  findAndCountAll(page) {
+    return findAndCountAll(page);
   }
 
   findOne(userId) {

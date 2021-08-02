@@ -2,8 +2,14 @@ const { Users } = require('../../database/models');
 
 class Database {
 
-  findAll() {
-    return Users.findAll();
+  async findAndCountAll(page) {
+
+    const { count: total, rows: users } = await Users.findAndCountAll({
+      limit: 5,
+      offset: (page - 1) * 5
+    });
+    const pageTotal = Math.round(total/5)
+    return {users, pageTotal}
   }
 
   findOne(id) {

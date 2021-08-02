@@ -66,15 +66,16 @@ class Controller {
 
     const rentalData = {
       rental_id: rentalId,
-      drop_off: rental.drop_off,
+      drop_off: rental[0].drop_off,
       actual_drop: today,
       packActive: false
     }
     const delayDays = RentalService.getDelayDays(rentalData.drop_off, today);
-    const fine = RentalService.getFine(delayDays, rental.price);
+    const fine = RentalService.getFine(delayDays, rental[0].pack_price);
+
     try {
       await RentalService.desactivate(rentalData)
-      res.render("message", { message: `Pacote desativado com sucesso! Dias de atraso: ${delayDays} | Multa: R$${fine}` })
+      res.render("messageDesativate", { delayDays, fine} )
     } catch (err) {
       res.status(400).json({ message: err.message });
     }

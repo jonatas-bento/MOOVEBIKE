@@ -90,6 +90,7 @@ class Database {
   }
 
   async findOne(userId) {
+    console.log('database rentals findOne')
     const packActive = await Rentals.findOne({
       where: {
         user_id: userId,

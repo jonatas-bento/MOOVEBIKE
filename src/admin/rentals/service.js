@@ -6,6 +6,7 @@ class Service {
   }
 
   findOne(userId) {
+    console.log('service do rentals findOne')
     return findOne(userId);
   }
 

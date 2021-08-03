@@ -2,7 +2,7 @@
 
 Projeto final do curso de Desenvolvimento Web Full Stack da instituição Digital House Coding School.(https://www.digitalhouse.com/br/)
 
-MOOVEBIKE comercializa planos de aluguel de bicicletas pelo web site com entrega e recebimento das bicicletas na rede lojas físicas.
+MOOVEBIKE comercializa planos de aluguel de bicicletas pelo web site com entrega e recebimento das bicicletas na rede de lojas físicas.
 
 Os planos comercializados:
 
@@ -101,4 +101,4 @@ localhost:xxxx
 
 ## Membros
 
--[Anne Bortoli de Oliveira] (https://github.com/ANNEBORTOLI) -[Flávio Magalhaes Sipoli] (https://github.com/flavio-sipoli) -[Flúvio Lima] (https://github.com/Gh0ulbrz) -[Jonatas Bento] (https://github.com/jonatas-bento) -[Lila An] (https://github.com/lilex82) -[Lourene de Melo Camargo de Schueler] (https://github.com/Lourene-MCSchueler)
+-[Anne Bortoli de Oliveira](https://github.com/ANNEBORTOLI) -[Flávio Magalhaes Sipoli](https://github.com/flavio-sipoli) -[Flúvio Lima](https://github.com/Gh0ulbrz) -[Jonatas Bento](https://github.com/jonatas-bento) -[Lila An](https://github.com/lilex82) -[Lourene de Melo Camargo de Schueler](https://github.com/Lourene-MCSchueler)

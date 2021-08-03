@@ -7,7 +7,7 @@ body {
 }
 
 main {
-  width: 400px;
+  width: 600px;
   padding: 10px;
   margin: auto;
 }
@@ -23,12 +23,25 @@ h1 {
 }
 
 h1:after {
-  content: ' ';
+  content: " ";
   display: block;
   width: 100%;
   height: 2px;
   margin-top: 0.625rem;
-  background: -webkit-linear-gradient( left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+  background: -webkit-linear-gradient(
+    left,
+    rgba(147, 184, 189, 0) 0%,
+    rgba(147, 184, 189, 0.8) 20%,
+    rgba(147, 184, 189, 1) 53%,
+    rgba(147, 184, 189, 0.8) 79%,
+    rgba(147, 184, 189, 0) 100%
+  );
+}
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .admin a {
@@ -37,9 +50,25 @@ h1:after {
   text-decoration: none;
 }
 
-.admin li {
-  list-style-type: none;
+.admin button {
   line-height: 1.875rem;
   text-align: center;
 }
 
+button {
+  background-color: var(--color3);
+  width: 70%;
+  font-weight: bold;
+  border: 1px solid var(--color3);
+  color: var(--color6);
+  cursor: pointer;
+  padding: 8px 5px;
+  font-size: 18px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background: var(--color12);
+  transition: all 0.3s ease-in-out;
+}

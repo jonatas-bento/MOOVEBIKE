@@ -5,8 +5,7 @@ class AuthService {
   static async authenticate(email, password) {
     try {
       const user = await UsersService.findByEmail(email)
-      console.log(user)
-
+      
       if (user && verify(password, user.password)) {
         return user
 

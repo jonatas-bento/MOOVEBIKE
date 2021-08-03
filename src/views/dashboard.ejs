@@ -19,53 +19,57 @@
 </head>
 
 <body class="container">
-    
+
   <header class="d-flex justify-content-center">
-      <a class="container" href="/"><img src="/img/Logo_MoovebikeA_modV3.png" alt="logo"></a>
+    <a class="container" href="/"><img src="/img/Logo_MoovebikeA_modV3.png" alt="logo"></a>
   </header>
   <main>
-    <h2 class="container">MINHAS RESERVAS</h2>
-    <div class="container">
-      <div>
-        <button class="btn btn-warning mb-4">
-            <a style="text-decoration:none; color: black;" href="/">Voltar</a>
-        </button>
-    </div>
-      <table class="table table text-center table-striped">
-        <thead>
-          <tr>
-            <th>Nome do Pacote</th>
-            <th>Modelo da Bike</th>
-            <th>Período</th>
-            <th>Retirada</th>
-            <th>Devolução</th>
-          </tr>
-        </thead>
-        <tbody>
+    <% if (locals.isLogged) { %>
+      <p>Olá <%=locals.user.name%>
+      </p>
+      <% } %>
+        <h2 class="container">MINHAS RESERVAS</h2>
+        <div class="container">
+          <div>
+            <button class="btn btn-warning mb-4">
+              <a style="text-decoration:none; color: black;" href="/">Voltar</a>
+            </button>
+          </div>
+          <table class="table table text-center table-striped">
+            <thead>
+              <tr>
+                <th>Nome do Pacote</th>
+                <th>Modelo da Bike</th>
+                <th>Período</th>
+                <th>Retirada</th>
+                <th>Devolução</th>
+              </tr>
+            </thead>
+            <tbody>
 
-          <tr>
-            <td>
-              <%= pack.name%>
-            </td>
-            <td>
-              <%if(!pack.electric){%>
-                Tradicional
-                <%}%>
-                  <% if(pack.electric) { %>
-                    Elétrica
+              <tr>
+                <td>
+                  <%= pack.name%>
+                </td>
+                <td>
+                  <%if(!pack.electric){%>
+                    Tradicional
                     <%}%>
-            </td>
-            <td>
-              <%=pack.period%>
-            </td>
-            <td>
-              <%=activeRental.pick_up%>
-            </td>
-            <td>
-              <%=activeRental.drop_off%>
-            </td>
-          </tr>
-    </div>
+                      <% if(pack.electric) { %>
+                        Elétrica
+                        <%}%>
+                </td>
+                <td>
+                  <%=pack.period%>
+                </td>
+                <td>
+                  <%=activeRental.pick_up%>
+                </td>
+                <td>
+                  <%=activeRental.drop_off%>
+                </td>
+              </tr>
+        </div>
   </main>
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

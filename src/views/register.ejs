@@ -23,19 +23,30 @@
 
         <form action="/register" method="POST">
 
-            <% if (locals.error) { %>
-                <div class="alert">
-                    <%= locals.error %>
-                </div>
+            <label for="name">Nome Completo</label><br>
+            <% if (locals.errors && errors.name) { %>
+                <p class="feedback">
+                    <%= errors.name.msg%>
+                </p>
                 <% } %>
-
-                    <label for="name">Nome Completo</label>
                     <input type="text" id="name" name="name" required="required">
+
                     <label for="email">Email</label>
-                    <input type="text" id="email" name="email" required="required">
-                    <label for="password">Senha</label>
-                    <input type="password" id="password" name="password" required="required">
-                    <button type="submit">Inscreva-se</button>
+                    <% if ((locals.errors && errors.email) || (locals.error)) { %>
+                        <p class="feedback">
+                            <%= (errors.email.msg) || (locals.error)%>
+                        </p>
+                        <% } %>
+                            <input type="text" id="email" name="email" required="required">
+
+                            <label for="password">Senha</label>
+                            <% if (locals.errors && errors.password) { %>
+                                <p class="feedback">
+                                    <%= errors.password.msg%>
+                                </p>
+                                <% } %>
+                                    <input type="password" id="password" name="password" required="required">
+                                    <button type="submit">Inscreva-se</button>
         </form>
     </main>
 </body>

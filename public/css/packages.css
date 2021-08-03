@@ -4,7 +4,7 @@
     height: auto;
 }
 .third-section-tittle {
-    background-image: url(/img/AdobeStock_267590824_v2.png);
+    background-image: var(--backImg3);
     width: 100%;
     height: 500px;
     background-size: cover;
@@ -22,7 +22,7 @@ h2 {
 .third-section-tittle span {
     font-size: 3.5rem;
     color: var(--color5);
-    box-shadow: 2 4 6 7 rgba(74, 214, 168, 0);
+    box-shadow: 2 4 6 7 var(--color11);
     display: flex;
     justify-content: center;
     align-content: center;

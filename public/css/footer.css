@@ -1,7 +1,7 @@
 /* ---------------NEWSLETTER-------------------------- */
 footer .news {
   display: flex;
-  background-color: rgb(74, 214, 168);
+  background-color: var(--color3);
   width: 100%;
   height: auto;
   justify-content: center;
@@ -12,7 +12,7 @@ footer .news {
 .news span {
   font-size: 1.3rem;
   font-weight: 700;
-  color: #fff;
+  color: var(--color5);
 }
 
 .news input {
@@ -27,11 +27,11 @@ footer .news {
   width: 80px;
   letter-spacing: 1px;
   cursor: pointer;
-  color: black;
+  color: var(--color6);
   font-size: 1rem;
   font-weight: 600;
-  background-color: #ffeb3b;
-  border: solid 1px #ffeb3b;
+  background-color: var(--color4);
+  border: solid 1px var(--color4);
   border-radius: 5px;
 }
 
@@ -47,7 +47,7 @@ footer .infos {
   flex-direction: column;
   width: 100%;
   height: auto;
-  background-image: url(/img/backgrounds-texture-01-1920x589.jpg);
+  background-image: var(--backImg1);
 }
 
 footer .geral {
@@ -66,27 +66,32 @@ footer .geral {
   width: 180px;
   margin-bottom: 5px;
 }
+
 .left p {
   margin-left: 1rem;
-  color: #fff;
+  color: var(--color5);
   line-height: 1.5rem;
 }
+
 .right {
   justify-self: flex-end;
   padding-top: 2rem;
   padding-right: 4rem;
 }
+
 .right h3 {
   margin-bottom: 1rem;
   font-size: 1.2rem;
   font-weight: bold;
-  color: rgb(74, 214, 168);
+  color: var(--color3);
   padding-left: 0rem;
 }
+
 .medias {
   display: flex;
   justify-content: space-evenly;
 }
+
 .links {
   display: flex;
   margin: 2rem auto;
@@ -95,16 +100,17 @@ footer .geral {
 .list::after {
   content: "|";
   padding: 0 1rem;
-  color: #fff;
+  color: var(--color5);
 }
 
 .links a {
   text-decoration: none;
-  color: #fff;
+  color: var(--color5);
 }
+
 .links a:hover {
-  background-color: #ffeb3b;
-  color: black;
+  background-color: var(--color4);
+  color: var(--color6);
 }
 
 /******************Media Queries**********************/

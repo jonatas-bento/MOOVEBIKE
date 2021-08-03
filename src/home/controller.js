@@ -43,11 +43,11 @@ class HomeController {
         const activeRental = await RentalService.findOne(userId);
         const packId = activeRental.pack_id
         const pack = await PackService.findOne(packId)
-        
+
         res.render('dashboard', { activeRental, pack });
       }
-      catch (err) {   
-           res.render('message', { message: 'Você não tem plano ativo ou pendente de ativação!' }) 
+      catch (err) {
+        res.render('message', { message: 'Você não tem plano ativo ou pendente de ativação!' })
       }
     }
   }
@@ -122,35 +122,35 @@ class HomeController {
       password: req.body.password
     }
     try {
-
-      let err = validationResult(req)
-      if (err.isEmpty()) {
-        await UsersService.create(newUser)
+      let errors = validationResult(req)
+      if (!errors.isEmpty()) {
+        res.render('register', { errors: errors.mapped() })
+      } else {
+        const user = await UsersService.create(newUser)
+        req.startSession(user)
+        res.redirect('/')
       }
-      const user = await UsersService.findByEmail(newUser.email)
-      req.startSession(user)
-      res.redirect('/')
     } catch (err) {
-      res.status(500).json({ message: err.message });
+      res.render('register', { error: 'Email já cadastrado!' })
     }
   }
-  
+
   static async createRental(req, res) {
     const userId = req.session.user.id;
     const packId = req.params.id;
-    
-    try{
+
+    try {
       const activePack = await RentalService.findOne(userId);
 
-      if(activePack) {
+      if (activePack) {
         res.render('message', { message: 'Você tem um plano ativo!' })
-        }else{
-          await RentalService.create(userId, packId);
-          res.render('message', { message: 'Pacote comprado com sucesso!' });
-          }
-          } catch(err) {
-            res.status(500).json({ message: err.message });
-            }
+      } else {
+        await RentalService.create(userId, packId);
+        res.render('message', { message: 'Pacote comprado com sucesso!' });
+      }
+    } catch (err) {
+      res.status(500).json({ message: err.message });
+    }
   }
 }
 

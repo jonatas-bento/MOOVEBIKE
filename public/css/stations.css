@@ -15,7 +15,7 @@
   .mapa-das-estacoes span{
       font-size: 3.5rem;
       color: var(--color5);
-      box-shadow: 2 4 6 7 rgba(74, 214, 168, 0);
+      box-shadow: 2 4 6 7 var(--color11);
       display: flex;
       justify-content: center;
       align-content: center;

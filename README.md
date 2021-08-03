@@ -30,6 +30,10 @@ Os modelos de bicicletas: tradicional e elétrica.
 
 ### Fluxo da loja física
 
+O sistema disponibiliza uma área administrativa visível apenas após o login dos administradores.
+Obs: O login dos administradores é na mesma página que dos demais usuários.
+
+Na área administrativa
 - Ativar o plano na entrega da bicicleta.
 - Desativar o plano no recebimento da bicicleta e cobrança de multa, se houver.
 
@@ -101,4 +105,9 @@ localhost:xxxx
 
 ## Membros
 
--[Anne Bortoli de Oliveira](https://github.com/ANNEBORTOLI) -[Flávio Magalhaes Sipoli](https://github.com/flavio-sipoli) -[Flúvio Lima](https://github.com/Gh0ulbrz) -[Jonatas Bento](https://github.com/jonatas-bento) -[Lila An](https://github.com/lilex82) -[Lourene de Melo Camargo de Schueler](https://github.com/Lourene-MCSchueler)
+- [Anne Bortoli de Oliveira](https://github.com/ANNEBORTOLI) 
+- [Flávio Magalhaes Sipoli](https://github.com/flavio-sipoli) 
+- [Flúvio Lima](https://github.com/Gh0ulbrz) 
+- [Jonatas Bento](https://github.com/jonatas-bento) 
+- [Lila An](https://github.com/lilex82) 
+- [Lourene de Melo Camargo de Schueler](https://github.com/Lourene-MCSchueler)

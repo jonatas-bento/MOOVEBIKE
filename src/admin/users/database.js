@@ -8,7 +8,7 @@ class Database {
       limit: 5,
       offset: (page - 1) * 5
     });
-    const pageTotal = Math.round(total/5)
+    const pageTotal = Math.ceil(total/5)
     return {users, pageTotal}
   }
 

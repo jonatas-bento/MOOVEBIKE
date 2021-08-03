@@ -6,7 +6,6 @@ class Service {
   }
 
   findOne(userId) {
-    console.log('service do rentals findOne')
     return findOne(userId);
   }
 
@@ -14,22 +13,24 @@ class Service {
     return create(userId, packId)
   }
 
-  findPending(rentalId) {
-    if (rentalId) {
-      return findPendingById(rentalId)
-    }
-    return findPending();
+  findPending(page) {
+    return findPending(page);
   }
 
-  findActives(rentalId) {
-    if (rentalId) {
-      return findActivesById(rentalId);
-    }
-    return findActives();
+  findPendingToActivate(rentalId) {
+    return findPendingById(rentalId)
   }
 
-  findInactives() {
-    return findInactives();
+  findActivesToDesactivate(rentalId) {
+    return findActivesById(rentalId);
+  }
+
+  findActives(page) {
+    return findActives(page);
+  }
+
+  findInactives(page) {
+    return findInactives(page);
   }
 
   activate(rentalData) {
@@ -66,7 +67,6 @@ class Service {
 
   getDelayDays(drop_off, today) {
  
-
     const now = new Date(today); // Data de hoje (actual_drop)
     const past = new Date(drop_off); // Data no passado (drop_off)
     const diff = now.getTime() - past.getTime(); // Subtrai uma data pela outra
@@ -81,7 +81,6 @@ class Service {
   }
 
   getFine(days, packPrice) {
-
     return days < 0 ? 0 : days * (Number(packPrice) * 0.1)
   }
 }

@@ -41,6 +41,17 @@
         </div>
       </div>
 
+      <nav aria-label="...">
+        <ul class="pagination pagination-sm">
+            <% for (let pageNumber= 1; pageNumber <= pageTotal; pageNumber++) { %>
+                <li class="page-item">
+                    <a class="page-link" href="?page=<%=pageNumber%>">
+                        <%=pageNumber%>
+                    </a>
+                </li>
+            <% } %>
+      </nav>
+      
       <table class="table text-center align-itens-center table table-striped">
         <thead>
           <tr>

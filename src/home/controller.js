@@ -115,24 +115,6 @@ class HomeController {
     res.redirect('/')
   }
 
-  // static async doRegister(req, res) {
-  //   try {
-  //     const newUser = {
-  //       name: req.body.name,
-  //       email: req.body.email,
-  //       password: req.body.password
-  //     }
-  //     let err = validationResult(req)
-  //     if (err.isEmpty())
-  //       await UsersService.create(newUser)
-
-  //     req.startSession(newUser)
-  //     res.redirect('/')
-  //   } catch (err) {
-  //     res.status(500).json({ message: err.message });
-  //   }
-  // }
-
   static async doRegister(req, res) {
     const newUser = {
       name: req.body.name,
@@ -154,12 +136,9 @@ class HomeController {
   }
   
   static async createRental(req, res) {
-
-    console.log('controller Home CreateRental')
     const userId = req.session.user.id;
     const packId = req.params.id;
     
-    console.log(userId, packId)
     try{
       const activePack = await RentalService.findOne(userId);
 

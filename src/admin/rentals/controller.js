@@ -13,27 +13,31 @@ class Controller {
   }
 
   async listPending(req, res) {
+    const { page = 1 } = req.query
     try {
-      const rentals = await RentalService.findPending();
-      res.render('adminRentalsPending', { rentals });
+      const { rentals, pageTotal } = await RentalService.findPending(page);
+
+      res.render('adminRentalsPending', { rentals, pageTotal });
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
   }
 
   async listActives(req, res) {
+    const { page = 1 } = req.query
     try {
-      const rentals = await RentalService.findActives();
-      res.render('adminRentalsActive', { rentals });
+      const { rentals, pageTotal } = await RentalService.findActives(page);
+      res.render('adminRentalsActive', { rentals, pageTotal });
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
   }
 
   async listInactives(req, res) {
+    const { page = 1 } = req.query
     try {
-      const rentals = await RentalService.findInactives();
-      res.render('adminRentalsInactive', { rentals });
+      const { rentals, pageTotal } = await RentalService.findInactives(page); 
+      res.render('adminRentalsInactive', { rentals, pageTotal }); 
     } catch (err) {
       res.status(500).json({ message: err.message });
     }
@@ -42,7 +46,7 @@ class Controller {
   async activate(req, res) {
     const today = new Date();
     const rentalId = req.params.id;
-    const rental = await RentalService.findPending(rentalId);
+    const rental = await RentalService.findPendingToActivate(rentalId);
     const period = rental[0].pack_period;
 
     const rentalData = {
@@ -62,7 +66,7 @@ class Controller {
   async desactivate(req, res) {
     const today = new Date();
     const rentalId = req.params.id;
-    const rental = await RentalService.findActives(rentalId);
+    const rental = await RentalService.findActivesToDesactivate(rentalId);
 
     const rentalData = {
       rental_id: rentalId,
@@ -72,7 +76,6 @@ class Controller {
     }
     const delayDays = RentalService.getDelayDays(rentalData.drop_off, today);
     const fine = RentalService.getFine(delayDays, rental[0].pack_price);
-
     try {
       await RentalService.desactivate(rentalData)
       res.render("messageDesativate", { delayDays, fine} )

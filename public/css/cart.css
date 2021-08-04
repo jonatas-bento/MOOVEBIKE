@@ -1,9 +1,10 @@
 body {
   background: var(--backImg2);
   color: var(--color5);
-  min-width: 100vw;
   height: 100vh;
+  margin: 0 auto;
 }
+
 main {
   padding: 10px;
   display: flex;
@@ -81,6 +82,6 @@ button {
 }
 
 button:hover {
-  background: var(--color4);
+  background: var(--color12);
   transition: all 0.3s ease-in-out;
 }

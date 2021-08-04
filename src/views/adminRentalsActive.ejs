@@ -19,39 +19,39 @@
 </head>
 
 <body class="container">
-    
+
   <header class="d-flex justify-content-center">
-      <a class="container" href="/"><img src="/img/Logo_MoovebikeA_modV3.png" alt="logo"></a>
+    <a class="container" href="/"><img src="/img/logo.png" alt="logo"></a>
   </header>
 
   <main>
-    
+
     <h2 class="container">PACOTES ATIVOS</h2>
     <div class="container">
       <div class="d-flex flex-direction-row">
-          <div class="form-inline mr-auto">
-              <div>
-                  <button class="btn btn-warning mb-4">
-                      <a style="text-decoration:none; color: black;" href="/admin">Voltar</a>
-                  </button>
-              </div>
-              <div class="form-group mb-2">
-                  <input id="search" type="text" class="form-control mr2" placeholder="Usuario" />
-              </div>
+        <div class="form-inline mr-auto">
+          <div>
+            <button class="btn btn-warning mb-4">
+              <a style="text-decoration:none; color: black;" href="/admin">Voltar</a>
+            </button>
+          </div>
+          <div class="form-group mb-2">
+            <input id="search" type="text" class="form-control mr2" placeholder="Usuario" />
+          </div>
         </div>
       </div>
 
       <nav aria-label="...">
         <ul class="pagination pagination-sm">
-            <% for (let pageNumber= 1; pageNumber <= pageTotal; pageNumber++) { %>
-                <li class="page-item">
-                    <a class="page-link" href="?page=<%=pageNumber%>">
-                        <%=pageNumber%>
-                    </a>
-                </li>
+          <% for (let pageNumber=1; pageNumber <=pageTotal; pageNumber++) { %>
+            <li class="page-item">
+              <a class="page-link" href="?page=<%=pageNumber%>">
+                <%=pageNumber%>
+              </a>
+            </li>
             <% } %>
       </nav>
-      
+
       <table class="table text-center align-itens-center table table-striped">
         <thead>
           <tr>

@@ -31,12 +31,12 @@ btnScrolltoTop.addEventListener("click", function () {
   })
 });
 
-function Enviar() {
-  let nome = document.getElementById("nome");
-  if (nome.value != "") {
-    alert('Obrigado sr(a) ' + nome.value + ' a sua mensagem foi registrada');
-  }
-}
+// function Enviar() {
+//   let nome = document.getElementById("nome");
+//   if (nome.value != "") {
+//     alert('Obrigado sr(a) ' + nome.value + ' a sua mensagem foi registrada');
+//   }
+// }
 
 /*********Configuring Locations *******************/
 
@@ -65,7 +65,7 @@ function initMap() {
     const marker = new google.maps.Marker({
       position,
       map,
-      icon: iconBase + 'Icon_MooveA.png',
+      icon: iconBase + 'iconStation.png',
       title: `${i + 1}. ${title}`,
       label: `${i + 1}`,
       optimized: false,
@@ -93,9 +93,15 @@ function moveBackToTheOldStage() {
 
 /*********NEWSLETTER *******************/
 
-function clicou() {
-  const clicar = window.document.getElementById("enviarEmail")
-  clicar = window.alert("Email Cadastrado")
+function clickEmail() {
+  alert("Email cadastrado com sucesso!")
 }
 
+function clearFields() {
+  document.getElementById("email").value = "";
+}
 
+function newsletter() {
+  clickEmail();
+  clearFields();
+}

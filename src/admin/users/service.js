@@ -34,6 +34,7 @@ class Service {
     await resetPassword(userEmail, cryptoPassword)
     mailService(userEmail, 'Nova Senha', newPassword)
   }
+
 }
 
 const UsersService = new Service();

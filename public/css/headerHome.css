@@ -17,7 +17,7 @@ header .logo a {
   color: var(--color5);
   text-decoration: none;
   text-transform: uppercase;
-  background-image: url("/img/Logo_MoovebikeA_modV3.png");
+  background-image: url("/img/logo.png");
   background-size: 200px;
   background-repeat: no-repeat;
   display: inline-block;
@@ -142,25 +142,41 @@ header .btn-login:hover,
   #dropdown-menu.active {
     transform: translateY(0);
   }
+
+  .dropdown-itens button {
+    background-color: var(--color3);
+    width: 30%;
+    font-weight: bold;
+    border: 1px solid var(--color3);
+    cursor: pointer;
+    padding: 8px 5px;
+    font-size: 18px;
+    border-radius: 3px;
+    margin: 10px 0;
+    line-height: 20px;
+    text-align: center;
+  }
+  
+   .dropdown-itens button:hover {
+    background: var(--color13);
+    border: 1px solid var(--color13);
+  }
+
+  .dropdown-itens a {
+    letter-spacing: 2px;
+    color: var(--color5);
+    text-decoration: none;
+  }
+  
   .dropdown-itens {
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: space-evenly;
     padding: 81px;
     height: 100%;
     list-style: none;
-    font-size: 1.5rem;
   }
-  .dropdown-itens li a {
-    text-decoration: none;
-    color: var(--color5);
-    font-size: 2rem;
-    font-weight: 600;
-  }
-  .dropdown-itens li a:hover {
-    color: var(--color13);
-  }
+  
   #headerTopo {
     background-color: var(--color3);
   }

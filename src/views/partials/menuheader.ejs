@@ -1,17 +1,18 @@
-<div onclick="moveBackToTheOldStage()" id="dropdown-menu" class>
-    <ul class="dropdown-itens">
-        <li><a href="/">Home</a></li>
-        <li><a href="/packages">Planos</a></li>
-        <li><a href="/stations">Estações</a></li>
+<div onClick="moveBackToTheOldStage()" id="dropdown-menu" class>
+    <div class="dropdown-itens">
+        <button><a href="/">Home</a></button>
+        <button><a href="/packages">Planos</a></button>
+        <button><a href="/stations">Estações</a></button>
+        <button><a href="/register">Cadastre-se</a></button>
+        <button><a href="/login">Login</a></button>
 
 
         <% if(locals.isLoggedAdmin){ %>
-            <li><a href="/admin">Administrador</a></li>
+            <button><a href="/admin">Administrador</a></button>
             <% } if (locals.isLogged) { %>
-                <li><a href="/dashboard">Reservas</a></li>
+                <button><a href="/dashboard">Reservas</a></button>
+                <button><a href="/logout">Sair</a></button>
                 <% } %>
 
-                <li><a href="/login">Login</a></li>
-                <li><a href="/logout">Sair</a></li>
-    </ul>
+    </div>
 </div>

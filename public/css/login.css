@@ -49,7 +49,7 @@ input {
   border: 1px solid var(--color2);
 }
 
-button[type="submit"] { 
+button { 
   background-color: var(--color3);
   width: 95%;
   font-weight: bold;
@@ -59,13 +59,14 @@ button[type="submit"] {
   padding: 8px 5px;
   font-size: 18px; 
   border-radius: 3px; 
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 
-button[type="submit"]:hover {
-  background: var(--color3);
-  transition: all .3s ease-in-out;
+button:hover {
+  background: var(--color12);
+  transition: all 0.3s ease-in-out;
 }
+
 
 .link a {
   margin-top: 10px;

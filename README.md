@@ -28,14 +28,16 @@ Os modelos de bicicletas: tradicional e elétrica.
 - Retirada da bicicleta na loja física
 - Informações sobre o plano adquirido disponíveis na página "Reservas".
 
-### Fluxo da loja física
+### Fluxo administrativo
 
-O sistema disponibiliza uma área administrativa visível apenas após o login dos administradores.
-Obs: O login dos administradores é na mesma página que dos demais usuários.
+O sistema disponibiliza área administrativa, com login na mesma página dos demais usuários, com 4 funcionalidades:
 
-Na área administrativa
-- Ativar o plano na entrega da bicicleta.
-- Desativar o plano no recebimento da bicicleta e cobrança de multa, se houver.
+1) Ativação de plano:  ocorre na retirada da bike 
+2) Desativação de plano: ocorre na entrega a bike
+3) Listagem de usuários
+4) Listagem de planos inativos.
+
+Obs: Se houver multa por atraso o pagamento é feito na loja, antes da desativação do plano.
 
 ## Tecnologias
 

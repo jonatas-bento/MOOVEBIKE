@@ -21,7 +21,7 @@ footer .news {
   width: 500px;
 }
 
-.news button[type="submit"] {
+.news button{
   margin-left: 2rem;
   height: 30px;
   width: 80px;
@@ -35,7 +35,7 @@ footer .news {
   border-radius: 5px;
 }
 
-button[type="submit"]:hover {
+button:hover {
   transition: all 0.3s ease-in-out;
 }
 

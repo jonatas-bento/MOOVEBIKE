@@ -113,6 +113,11 @@ hr {
 #btnScrolltoTop {
     display: none;
 }
+
+#headerTopo::after {
+    display: none;
+  }
+  
 /************MEDIA QUERIES ************/
 
 @media(max-width:1200px) {

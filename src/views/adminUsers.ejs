@@ -19,14 +19,14 @@
 </head>
 
 <body class="container">
-    
+
     <header class="d-flex justify-content-center">
-        <a class="container" href="/"><img src="/img/Logo_MoovebikeA_modV3.png" alt="logo"></a>
+        <a class="container" href="/"><img src="/img/logo.png" alt="logo"></a>
     </header>
     <main>
-        
+
         <h2 class="container">USUÁRIOS</h2>
-        
+
 
         <div class="container">
             <div class="d-flex flex-direction-row">
@@ -72,14 +72,14 @@
 
         <nav aria-label="...">
             <ul class="pagination pagination-sm">
-                <% for (let pageNumber= 1; pageNumber <= pageTotal; pageNumber++) { %>
+                <% for (let pageNumber=1; pageNumber <=pageTotal; pageNumber++) { %>
                     <li class="page-item">
                         <a class="page-link" href="?page=<%=pageNumber%>">
                             <%=pageNumber%>
                         </a>
                     </li>
-                <% } %>
-          </nav>
+                    <% } %>
+        </nav>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"

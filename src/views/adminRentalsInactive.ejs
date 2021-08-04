@@ -19,12 +19,12 @@
 </head>
 
 <body class="container">
-    
+
     <header class="d-flex justify-content-center">
-        <a class="container" href="/"><img src="/img/Logo_MoovebikeA_modV3.png" alt=""></a>
+        <a class="container" href="/"><img src="/img/logo.png" alt=""></a>
     </header>
     <main>
-        
+
         <h2 class="container">PACOTES INATIVOS</h2>
         <div class="container">
             <div class="d-flex flex-direction-row">
@@ -39,17 +39,17 @@
                     </div>
                 </div>
             </div>
-            
-              <nav aria-label="...">
+
+            <nav aria-label="...">
                 <ul class="pagination pagination-sm">
-                    <% for (let pageNumber= 1; pageNumber <= pageTotal; pageNumber++) { %>
+                    <% for (let pageNumber=1; pageNumber <=pageTotal; pageNumber++) { %>
                         <li class="page-item">
                             <a class="page-link" href="?page=<%=pageNumber%>">
                                 <%=pageNumber%>
                             </a>
                         </li>
-                    <% } %>
-              </nav>
+                        <% } %>
+            </nav>
             <table class="table text-center align-itens-center table table-striped">
                 <thead>
                     <tr>

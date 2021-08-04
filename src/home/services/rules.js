@@ -1,21 +1,21 @@
 const rules = [
     {
-        photo: "/img/one-removebg-preview.png",
+        photo: "/img/number-one.png",
         title: "CADASTRO",
         info: "Cadastre-se em nosso site.",
     },
     {
-        photo: "/img/two-removebg-preview.png",
+        photo: "/img/number-two.png",
         title: "PLANO",
         info: "Escolha um plano. Temos planos: diário, semanal, mensal e anual.",
     },
     {
-        photo: "/img/threepg-removebg-preview.png",
+        photo: "/img/number-three.png",
         title: "RETIRADA",
         info: "Escolha a loja mais próxima de você para retirar.",
     },
     {
-        photo: "/img/four-removebg-preview.png",
+        photo: "/img/number-four.png",
         title: "DEVOLUÇÃO",
         info: "Devolva em qualquer uma das lojas.",
     }

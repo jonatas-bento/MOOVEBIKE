@@ -10,6 +10,7 @@ html{
 
 body{
   max-width: 1320px;
+  min-width: 425px;
   margin: 0 auto;
 }
 
@@ -27,18 +28,18 @@ body{
   --color11:rgba(74, 214, 168, 0);
   --color12:#98EACE;
   --color13:#6B727C;
-  --color14: rgba(147, 184, 189, 0);
-  --color15: rgba(147, 184, 189, 0.8);
-  --color16: rgba(147, 184, 189, 1);
-  --color17: rgba(147, 184, 189, 0.8);
-  --color18: rgba(147, 184, 189, 0);
+  --color14:rgba(147, 184, 189, 0);
+  --color15:rgba(147, 184, 189, 0.8);
+  --color16:rgba(147, 184, 189, 1);
+  --color17:rgba(147, 184, 189, 0.8);
+  --color18:rgba(147, 184, 189, 0);
 
   --font1: 'Roboto', sans-serif;
-  /* --font2: 'Uchen', serif; */
-
-  --backImg1: url(/img/backgrounds-texture-01-1920x589.jpg);
-  --backImg2: url(/img/background-body-1920x593.jpg);
-  --backImg3: url(/img/AdobeStock_267590824_v2.png);
+ 
+  --backImg1: url(/img/background-dark.jpg);
+  --backImg2: url(/img/background-light.jpg);
+  --backImg3: url(/img/package.png);
+  --backImg4: url(/img/station.jpeg);
 }
 
 

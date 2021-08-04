@@ -1,11 +1,12 @@
 const UsersService = require('./service');
+const mailService = require('../../libs/mail');
 
 class Controller {
 
   async list(req, res) {
     const { page = 1 } = req.query
     try {
-      const {users, pageTotal} = await UsersService.findAndCountAll(page)
+      const { users, pageTotal } = await UsersService.findAndCountAll(page)
       res.render('adminUsers', { users, pageTotal })
     } catch (err) {
       res.status(500).json({ message: err.message });
@@ -33,6 +34,7 @@ class Controller {
       res.status(500).json({ message: err.message });
     }
   }
+
 }
 
 const UsersController = new Controller(UsersService)

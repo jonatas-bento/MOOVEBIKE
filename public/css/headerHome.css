@@ -10,6 +10,7 @@ header {
   z-index: 50;
   background-color: var(--color11);
   max-width: 1320px;
+  min-width: 425px;
   margin: 0 auto;
 }
 
@@ -145,7 +146,7 @@ header .btn-login:hover,
 
   .dropdown-itens button {
     background-color: var(--color3);
-    width: 30%;
+    width: 60%;
     font-weight: bold;
     border: 1px solid var(--color3);
     cursor: pointer;

@@ -42,8 +42,8 @@ Obs: Se houver multa por atraso o pagamento é feito na loja, antes da desativa�
 
 - [Express](https://expressjs.com/pt-br/)
 - [Ejs](https://ejs.co/)
-- HTML5
-- CSS3
+- [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+- [CSS3](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 - [MySQL](https://www.mysql.com/)
 - [Sequelize ORM](https://sequelize.org/master/)
 
@@ -106,9 +106,9 @@ localhost:xxxx
 
 ## Membros
 
-- [Anne Bortoli de Oliveira](https://github.com/ANNEBORTOLI) 
-- [Flávio Magalhaes Sipoli](https://github.com/flavio-sipoli) 
-- [Flúvio Lima](https://github.com/Gh0ulbrz) 
+- [Anne Bortoli](https://github.com/ANNEBORTOLI) 
+- [Flávio Sipoli](https://github.com/flavio-sipoli) 
+- [Flúvio Lima](https://github.com/Lyebert) 
 - [Jonatas Bento](https://github.com/jonatas-bento) 
 - [Lila An](https://github.com/lilex82) 
-- [Lourene de Melo Camargo de Schueler](https://github.com/Lourene-MCSchueler)
+- [Lourene Schueler](https://github.com/Lourene-MCSchueler)

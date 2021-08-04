@@ -5,6 +5,7 @@ header a {
   height: 51px;
   display: flex;
   max-width: 1320px;
+  min-width: 425px;
   margin: 0 auto;
 }
 

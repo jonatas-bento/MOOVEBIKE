@@ -104,7 +104,7 @@ class HomeController {
         return res.render('register', { error: 'Faça seu cadastro!' })
       }
       await UsersService.resetPassword(userEmail)
-      res.redirect('/login')
+      return res.render('login', { message: 'Senha enviada com sucesso!' })
     } catch (err) {
       res.status(500).json({ message: err.message });
     }

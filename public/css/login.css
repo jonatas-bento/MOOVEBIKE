@@ -75,8 +75,6 @@ button:hover {
 }
 
 .alert {
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.5rem;
   color: var(--color10);
+    padding: 5px 0;
   }

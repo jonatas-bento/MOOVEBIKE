@@ -19,7 +19,6 @@ Os modelos de bicicletas: tradicional e elétrica.
 
 - Cada usuário pode ter apenas um plano ativo.
 - Se o cliente entregar a bicicleta antes do prazo de devolução, o plano ficará inativo.
-- Se houver atraso na devolução, a multa deverá ser paga no momento da entrega da bicicleta.
 
 ### Fluxo do usuário
 
@@ -33,9 +32,9 @@ Os modelos de bicicletas: tradicional e elétrica.
 O sistema disponibiliza área administrativa, com login na mesma página dos demais usuários, com 4 funcionalidades:
 
 1) Ativação de plano:  ocorre na retirada da bike 
-2) Desativação de plano: ocorre na entrega a bike
+2) Desativação de plano: ocorre na entrega da bike
 3) Listagem de usuários
-4) Listagem de planos inativos.
+4) Listagem de planos inativos
 
 Obs: Se houver multa por atraso o pagamento é feito na loja, antes da desativação do plano.
 
@@ -81,13 +80,13 @@ Conectar o banco de dados e criar um schema com o nome moove_bike
 Executar migration
 
 ```
-$ npx sequelize-cli db:migrate:all
+$ npx sequelize-cli db:migrate
 ```
 
-Cadastrar previamente os dados dos administradores no arquivo ('src', 'database', 'seeders', '20210705135420-demo-admins').
+Cadastrar os administradores no arquivo ('src', 'database', 'seeders', '20210705135420-demo-admins').
 A senha deve estar criptografada. Ver arquivo ('src', 'libs', 'crypto').
 
-Popular o banco de dados:
+Popular o banco de dados
 
 ```
 $ npx sequelize-cli db:seed:all

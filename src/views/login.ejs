@@ -5,51 +5,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon96.png">
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/login.css">
-
     <title>Login</title>
 </head>
 
 <body>
     <header>
-        <a href="/"><img src="/img/Logo_MoovebikeA_modV3.png" alt=""></a>
+        <a href="/"><img src="/img/logo.png" alt="logo"></a>
     </header>
     <main>
         <div id="login">
-            <form>
-                <h1><span>Entrar</span></h1>
+            <form action="/login" method="POST">
+                <h1>Entrar</h1>
 
-                <p>
-                    <label for="email_login">Email</label>
-                    <input id="email_login" name="email_login" required="required" type="email"
-                        placeholder="ex:seuemail@email.com" />
-                </p>
-
-                <p>
-                    <label for="password">Senha</label>
-                    <input id="password" name="password" required="required" type="password" placeholder="ex:123abc*" />
-                </p>
-
-                <p>
-                    <label for="manterlogado">Lembrar-me</label>
-                    <input type="checkbox" name="manterlogado" id="manterlogado" value="" />
-
-                </p>
-
-                <p>
-                    <button type="submit">Entrar</button>
-                </p>
-
-                <p class="link">
-                    Ainda não tem conta?
-                    <a href="/cadastro">Cadastre-se</a>
-                </p>
+                <% if ((locals.error) || (locals.message)) { %>
+                    <div class="alert">
+                        <%= (locals.error || locals.message) %>
+                    </div>
+                    <br>
+                    <% } %>
+                        <label for="email">Email</label>
+                        <input id="email" name="email" required="required" type="text"
+                            placeholder="ex:seuemail@email.com" />
+                        <label for="password">Senha</label>
+                        <input id="password" name="password" required="required" type="password"
+                            placeholder="ex:123abc*" />
+                        <button type="submit">Entrar</button>
+                        <p class="link">
+                            Ainda não tem conta?
+                            <a href="/register">Cadastre-se</a>
+                        </p>
+                        <p class="link">
+                            <a href="/resetPassword">Esqueceu sua senha?</a>
+                        </p>
             </form>
         </div>
-
     </main>
-    <!--<script src="/js/script.js"></script>-->
 </body>
 
 </html>

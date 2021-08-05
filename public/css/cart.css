@@ -1,0 +1,87 @@
+body {
+  background: var(--backImg2);
+  color: var(--color5);
+  height: 100vh;
+  margin: 0 auto;
+}
+
+main {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  color: var(--color3);
+  font-size: 3rem;
+  margin-bottom: 30px;
+  margin-top: 100px;
+  text-align: center;
+}
+
+h1:after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 10px;
+  background: -webkit-linear-gradient(
+    left,
+    var(--color14) 0%,
+    var(--color15) 20%,
+    var(--color16) 53%,
+    var(--color17) 79%,
+    var(--color18) 100%
+  );
+}
+
+.cart img {
+  width: 70px;
+}
+
+.resumo {
+  background: var(--backImg1);
+  padding: 20px;
+  width: 400px;
+  height: auto;
+  margin-top: 30px;
+  border-radius: 5px;
+}
+
+.resumo h2 {
+  text-align: center;
+  padding: 15px;
+}
+
+.resumo p {
+  padding: 5px;
+}
+
+.resumo h4 {
+  color: var(--color4);
+  padding: 5px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  background-color: var(--color3);
+  width: 80%;
+  font-weight: bold;
+  border: 1px solid var(--color3);
+  color: var(--color6);
+  cursor: pointer;
+  padding: 8px 5px;
+  font-size: 18px;
+  border-radius: 3px;
+  margin: 20px;
+}
+
+button:hover {
+  background: var(--color12);
+  transition: all 0.3s ease-in-out;
+}

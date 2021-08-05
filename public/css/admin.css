@@ -1,0 +1,73 @@
+body {
+  background: var(--backImg1);
+  color: var(--color5);
+  display: flex;
+  height: 100vh;
+  margin: 0 auto;
+}
+
+main {
+  width: 600px;
+  padding: 10px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: var(--color3);
+  padding: 1px;
+  font-weight: bold;
+  text-align: center;
+  padding-bottom: 1.8rem;
+  margin: 1rem;
+}
+
+h1:after {
+  content: " ";
+  display: block;
+  width: 100%;
+  height: 2px;
+  margin-top: 0.625rem;
+  background: -webkit-linear-gradient(
+    left,
+    var(--color14) 0%,
+    var(--color15) 20%,
+    var(--color16) 53%,
+    var(--color17) 79%,
+    var(--color18) 100%);
+}
+
+.admin {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin a {
+  letter-spacing: 2px;
+  color: var(--color6);
+  text-decoration: none;
+}
+
+.admin button {
+  line-height: 1.875rem;
+  text-align: center;
+}
+
+button {
+  background-color: var(--color3);
+  width: 70%;
+  font-weight: bold;
+  border: 1px solid var(--color3);
+  color: var(--color6);
+  cursor: pointer;
+  padding: 8px 5px;
+  font-size: 18px;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+button:hover {
+  background: var(--color12);
+  transition: all 0.3s ease-in-out;
+}

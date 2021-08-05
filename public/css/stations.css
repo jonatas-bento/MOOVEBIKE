@@ -1,0 +1,38 @@
+#map {
+    height: 400px;
+    width: 100%; 
+  }
+
+  .mapa-das-estacoes{
+      background-image: var(--backImg4);
+      width: 100%;
+      height: 500px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      position: relative;
+  }
+
+  .mapa-das-estacoes span{
+      font-size: 3.5rem;
+      color: var(--color5);
+      box-shadow: 2 4 6 7 var(--color11);
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+      height: auto;
+      position: absolute;
+      margin-top: 200px;
+      text-shadow: 0px 8px 12px var(--color6);
+      font-weight: bold;
+  }
+
+  #headerTopo::after {
+    display: none;
+  }
+
+  
+
+#btnScrolltoTop {
+  display: none;
+}

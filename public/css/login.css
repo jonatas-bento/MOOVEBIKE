@@ -1,22 +1,9 @@
 body {
-  background: url(/img/backgrounds-texture-01-1920x589.jpg);
-  color: white;
+  background: var(--backImg1);
+  color: var(--color5);
+  font-weight: 500;
   display: flex;
   min-height: 100vh;
-}
-
-header a {
-  background-color: rgb(74, 214, 168);
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 51px;
-  display: flex;
-  height: 51px;
-}
-header img {
-  margin-left:55px;
 }
 
 main {
@@ -26,14 +13,10 @@ main {
 }
 
 h1 {
-  font-size: 40px;
-  color: rgb(74, 214, 168);
-  padding: 1px;
-  font-family: 'Roboto', sans-serif;
-  font-weight: bold;
+  color: var(--color3);
+  font-size: 3rem;
+  margin-bottom: 40px;
   text-align: center;
-  padding-bottom: 30px;
-  margin: 1rem;
 }
 
 h1:after {
@@ -42,41 +25,56 @@ h1:after {
   width: 100%;
   height: 2px;
   margin-top: 10px;
-  background: -webkit-linear-gradient( left, rgba(147, 184, 189, 0) 0%, rgba(147, 184, 189, 0.8) 20%, rgba(147, 184, 189, 1) 53%, rgba(147, 184, 189, 0.8) 79%, rgba(147, 184, 189, 0) 100%);
+  background: -webkit-linear-gradient( left,     
+  var(--color14) 0%,
+  var(--color15) 20%,
+  var(--color16) 53%,
+  var(--color17) 79%,
+  var(--color18) 100%)
 }
 
 p {
   margin-bottom: 15px;
 }
 
-label {
-  color: rgb(74, 214, 168);
-  position: relative;
+label{
+  color: var(--color3);
 }
 
-input:not([type="checkbox"]) {
+input {
   width: 95%;
-  margin-top: 4px;
+  margin-top: 5px;
+  margin-bottom: 25px;
   padding: 10px;
-  border: 1px solid #b2b2b2;
+  border: 1px solid var(--color2);
 }
 
-button[type="submit"] {
+button { 
+  background-color: var(--color3);
   width: 95%;
+  font-weight: bold;
+  border: 1px solid var(--color3);
+  color: var(--color6);
   cursor: pointer;
-  background: rgb(74, 214, 168);
   padding: 8px 5px;
-  color: #fff;
-  font-size: 20px;
-  border: 1px solid #fff;
-  margin-bottom: 10px;
+  font-size: 18px; 
+  border-radius: 3px; 
+  margin-bottom: 20px;
 }
 
-button[type="submit"]:hover {
-  background: rgb(84, 250, 195);
+button:hover {
+  background: var(--color12);
+  transition: all 0.3s ease-in-out;
 }
+
 
 .link a {
+  margin-top: 10px;
   letter-spacing: 2px;
-  color: yellow;
+  color: var(--color4);
 }
+
+.alert {
+  color: var(--color10);
+    padding: 5px 0;
+  }

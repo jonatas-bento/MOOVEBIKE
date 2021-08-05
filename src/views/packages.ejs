@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon96.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/packages.css">
+    <link rel="stylesheet" href="/css/headerHome.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+    <title>MooveBike Planos</title>
+</head>
+
+<body>
+    <%- include('partials/header.ejs') %>
+        <section class="third-section">
+            <div class="third-section-tittle">
+                <span>
+                    Nossos Planos
+                </span>
+            </div>
+            <div class="container">
+                <% packages.forEach((pack)=> { %>
+                    <% if(!pack.electric){ %>
+                        <div class="box">
+                            <div class="plano">
+                                <h3>
+                                    <%= pack.name %>
+                                </h3>
+                            </div>
+                            <div class="valor">
+                                R$ <%= pack.price %>
+                            </div>
+                            <div class="texto">
+                                <p class="periodo">
+                                    <%= pack.period %>
+                                </p>
+                                <hr>
+                                <% packRules.forEach((rule)=> { %>
+
+                                    <% if(pack.id==rule.pack_id) {%>
+                                        <ul>
+                                            <li>
+                                                <%= rule.rule %>
+                                            </li>
+                                        </ul>
+                                        <% }}) %>
+                            </div>
+                            <button class="btn"><a href="cart/<%=pack.id%>">Comprar Agora!</a></button>
+
+                            <% packElectric=packages.filter(function(value){ return (value.period==pack.period &&
+                                value.electric==1) })%>
+
+                                <button class="btn"><a href="cart/<%=packElectric[0].id%>">Elétrica R$ <%=
+                                            packElectric[0].price %>
+                                    </a></button>
+                        </div>
+                        <% }}) %>
+            </div>
+        </section>
+        <%- include('partials/footer') %>
+            <script src="/js/script.js"></script>
+
+
+</body>
+
+</html>

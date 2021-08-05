@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon96.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/register.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <header>
+        <a href="/"><img src="/img/logo.png" alt=""></a>
+    </header>
+    <main>
+
+        <div class="cadastro">
+            <h1>Cadastre-se</h1>
+        </div>
+
+        <form action="/register" method="POST">
+
+            <label for="name">Nome Completo</label><br>
+            <% if (locals.errors && errors.name) { %>
+                <p class="message">
+                    <%= errors.name.msg%>
+                </p>
+                <% } %>
+                    <input type="text" id="name" name="name" required="required">
+
+                    <label for="email">Email</label>
+                    <% if (locals.errors && errors.email) { %>
+                        <p class="message">
+                            <%= (errors.email.msg) %>
+                        </p>
+                        <% } else if (locals.error) { %>
+                            <p class="message">
+                                <%= (locals.error) %>
+                            </p>
+                            <% } %>
+
+                                <input type="text" id="email" name="email" required="required">
+
+                                <label for="password">Senha</label>
+                                <% if (locals.errors && errors.password) { %>
+                                    <p class="message">
+                                        <%= errors.password.msg%>
+                                    </p>
+                                    <% } %>
+                                        <input type="password" id="password" name="password" required="required">
+                                        <button type="submit">Inscreva-se</button>
+        </form>
+    </main>
+</body>
+
+</html>

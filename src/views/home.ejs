@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/favicon96.png">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="/css/headerHome.css">
+    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+
+    <title>MooveBike</title>
+</head>
+
+<body>
+    <!--First Part-->
+    <section class="first-section">
+
+        <%- include('partials/header.ejs') %>
+            <%- include('partials/menuheader.ejs') %>
+
+                <div class="slider">
+                    <figure>
+                        <img src="img/home-01.jpg" alt="">
+                        <img src="img/home-02.jpg" alt="">
+                        <img src="img/home-03.jpg" alt="">
+                        <img src="img/home-01.jpg" alt="">
+                    </figure>
+
+                    <div class="content">
+                        <h1><span>Comece a Pedalar Já</span></h1><br>
+                        <h5>Contrate um plano e comece sua trajetória para uma vida mais saudável.</h5><br><br>
+                        <a href="/packages" class="btn-planos">Nossos Planos</a>
+                    </div>
+    </section>
+
+    <!--Second Section-->
+    <section class="second-section">
+        <div class="title">
+            <h2><span>Regras Utilização</span></h2>
+        </div>
+        <br>
+        <hr class="division">
+        <div class="container">
+            <% rules.forEach((rule)=> { %>
+                <div class="box">
+                    <img class="numbers" src="<%=rule.photo%> " alt="">
+                    <h3>
+                        <%=rule.title%>
+                    </h3>
+                    <hr class="division-insidebox">
+                    <p>
+                        <%=rule.info%>
+                    </p>
+                </div>
+                <% }) %>
+        </div>
+    </section>
+
+    <!--Third Section-->
+    <section class="third-section">
+        <div class="title">
+            <h2><span>Nossos Planos</span></h2>
+        </div>
+        <br>
+        <hr class="division">
+        <div class="container">
+            <% packages.forEach((pack)=> { %>
+                <% if(!pack.electric){ %>
+                    <div class="box">
+                        <div class="plano">
+                            <h3>
+                                <%= pack.name %>
+                            </h3>
+                        </div>
+                        <div class="valor">
+                            R$ <%= pack.price %>
+                        </div>
+                        <div class="texto">
+                            <span class="periodo">
+                                <%= pack.period %>
+                            </span><br>
+                            <span class="aviso">*Checar planos para Moove Elétrica</span>
+                        </div>
+                        <button class="btn"><a href="/packages">Ver Plano!</a></button>
+                    </div>
+                    <% }}) %>
+        </div>
+    </section>
+
+    <!--Fourth Section-->
+    <section class="fourth-section">
+        <div class="title">
+            <h2><span>Nossas MOOVE's</span></h2>
+        </div>
+        <br>
+        <hr class="division">
+        <div class="container">
+            <% bikes.forEach((bike)=> { %>
+                <div class="box">
+                    <div class="text-products">
+                        <p>
+                            <%=bike.name%>
+                        </p>
+                    </div>
+                    <img src="<%=bike.photo%>">
+                </div>
+                <% }) %>
+        </div>
+    </section>
+
+    <%- include('partials/footer') %>
+
+        <script src="/js/script.js"></script>
+
+</body>
+
+</html>

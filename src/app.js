@@ -1,6 +1,4 @@
-require('dotenv-safe').config({
-  allowEmptyValues: true
-});
+require('dotenv-safe').config();
 
 const createError = require('http-errors');
 const express = require('express');

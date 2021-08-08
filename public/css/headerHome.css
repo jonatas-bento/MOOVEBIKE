@@ -10,7 +10,7 @@ header {
   z-index: 50;
   background-color: var(--color11);
   max-width: 1320px;
-  min-width: 425px;
+  min-width: 320px;
   margin: 0 auto;
 }
 
@@ -202,3 +202,8 @@ header .btn-login:hover,
   .dropdown-itens button {
       width: 80%; }
   }
+
+@media (max-width: 370px) {
+  .dropdown-itens button {
+     width: 95%; }
+}

@@ -4,15 +4,15 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
 
     await queryInterface.bulkInsert('PackInfo', [{
-      rule: 'Faça quantas viagens quiser por 24h.',
+      rule: 'Faça quantas viagens quiser em 24h.',
       pack_id: 1
     },
     {
-      rule: 'Perfeito para quem quebrar um galho!',
+      rule: 'Perfeito para quem quer um quebra galho!',
       pack_id: 1
     },
     {
-      rule: 'Se for de bike elétrica, pague apenas +R$3.',
+      rule: 'Se for de bike elétrica, pague apenas +R$3.00',
       pack_id: 1
     },
     {
@@ -24,7 +24,7 @@ module.exports = {
       pack_id: 2
     },
     {
-      rule: 'Se for de bike elétrica, pague apenas +R$5,10.',
+      rule: 'Se for de bike elétrica, pague apenas +R$5.10',
       pack_id: 2
     },
     {
@@ -36,7 +36,7 @@ module.exports = {
       pack_id: 3
     },
     {
-      rule: 'Se for de bike elétrica, pague apenas +R$9,10.',
+      rule: 'Se for de bike elétrica, pague apenas +R$9.10',
       pack_id: 3
     },
     {
@@ -48,7 +48,7 @@ module.exports = {
       pack_id: 4
     },
     {
-      rule: 'Se for de bike elétrica, pague apenas +R$72,10.',
+      rule: 'Se for de bike elétrica, pague apenas +R$72.10',
       pack_id: 4
     }
     ]);

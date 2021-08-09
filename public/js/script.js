@@ -79,7 +79,7 @@ function initMap() {
   });
 }
 //Executing the function in case of reloading
-initMap();
+
 
 /********* Menu *******************/
 
@@ -107,3 +107,5 @@ function newsletter() {
   clickEmail();
   clearFields();
 }
+
+initMap();
